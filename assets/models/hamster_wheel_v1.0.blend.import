@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cwtts83tb24cc"
-path="res://.godot/imported/hamster_wheel_v0.3.blend-2ae8e0edda602518d4f24f4ce844609e.scn"
+path="res://.godot/imported/hamster_wheel_v1.0.blend-783475bc9ba36bf8395ebd5e4ccd2a31.scn"
 
 [deps]
 
-source_file="res://assets/models/hamster_wheel_v0.3.blend"
-dest_files=["res://.godot/imported/hamster_wheel_v0.3.blend-2ae8e0edda602518d4f24f4ce844609e.scn"]
+source_file="res://assets/models/hamster_wheel_v1.0.blend"
+dest_files=["res://.godot/imported/hamster_wheel_v1.0.blend-783475bc9ba36bf8395ebd5e4ccd2a31.scn"]
 
 [params]
 
