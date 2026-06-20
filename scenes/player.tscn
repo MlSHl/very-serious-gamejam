@@ -16,16 +16,16 @@ shape = SubResource("CylinderShape3D_qhqgy")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1736412227]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2.338086, 1.7391558)
 
-[node name="wheel" parent="." unique_id=658100602 instance=ExtResource("2_g2els")]
+[node name="wheel" parent="." unique_id=497356792 instance=ExtResource("2_g2els")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
-[node name="Arm Support" parent="wheel" index="5" unique_id=2083631492]
+[node name="Arm Support" parent="wheel" index="5" unique_id=1236032062]
 visible = false
 
-[node name="Left Arm" parent="wheel" index="6" unique_id=69465432]
+[node name="Left Arm" parent="wheel" index="6" unique_id=1273723606]
 visible = false
 
-[node name="Right Arm" parent="wheel" index="7" unique_id=771734320]
+[node name="Right Arm" parent="wheel" index="7" unique_id=364203362]
 visible = false
 
 [editable path="wheel"]

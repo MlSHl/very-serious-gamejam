@@ -15,7 +15,7 @@ albedo_color = Color(0.36760017, 0.41712326, 0.3504546, 1)
 [node name="main" type="Node3D" unique_id=660451211]
 
 [node name="player" parent="." unique_id=1076470779 instance=ExtResource("1_o5qli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77509916, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.405389, 25.74241, 35.063736)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1545545904]
 physics_material_override = SubResource("PhysicsMaterial_0wfyh")
@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.323177, 0.5, -108.19344)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.31028, 0.5, -85.19345)
 
 [node name="StaticBody3D14" parent="." unique_id=1054709206 instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.223129, 0.5, 35.42373)
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, -14.223, 12.5, 35.424)
 
 [node name="StaticBody3D15" parent="." unique_id=1347832644 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(0.99999225, -0.0020096013, 0.0033597471, 0.002018306, 0.99999464, -0.0025881205, -0.0033545252, 0.0025948852, 0.99999094, -24.15213, 0.5, 22.423729)
