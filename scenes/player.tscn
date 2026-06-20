@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bvchecf5a0r15"]
+
+[ext_resource type="Script" uid="uid://igmce3ebiefd" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://cc4kg56lpu271" path="res://assets/models/hamster_wheel_v0.3.glb" id="2_g2els"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qhqgy"]
+height = 0.6
+
+[node name="player" type="CharacterBody3D" unique_id=1076470779]
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392066775]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_qhqgy")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1736412227]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2.338086, 1.7391558)
+
+[node name="wheel" parent="." unique_id=658100602 instance=ExtResource("2_g2els")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="Arm Support" parent="wheel" index="5" unique_id=2083631492]
+visible = false
+
+[node name="Left Arm" parent="wheel" index="6" unique_id=69465432]
+visible = false
+
+[node name="Right Arm" parent="wheel" index="7" unique_id=771734320]
+visible = false
+
+[editable path="wheel"]
