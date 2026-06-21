@@ -2,13 +2,62 @@
 
 [ext_resource type="Script" uid="uid://igmce3ebiefd" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://cc4kg56lpu271" path="res://assets/models/hamster_wheel_v0.3.glb" id="2_g2els"]
+[ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://lld5qjdwya2s" path="res://assets/models/hamster_v1.0.glb" id="4_dqkch"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qhqgy"]
-height = 0.1
+height = 0.125
 radius = 0.1
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dqkch"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qlg0r"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tuyoq"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fjrip"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smehm"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ur7pv"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y4r1p"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2wvv"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
 [node name="player" type="CharacterBody3D" unique_id=1076470779]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392066775]
@@ -20,13 +69,34 @@ transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0.515
 
 [node name="wheel" parent="." unique_id=497356792 instance=ExtResource("2_g2els")]
 
-[node name="Arm Support" parent="wheel" index="5" unique_id=1236032062]
-visible = false
+[node name="Right Rim" parent="wheel" index="0" unique_id=803617691]
+surface_material_override/0 = SubResource("ShaderMaterial_dqkch")
 
-[node name="Left Arm" parent="wheel" index="6" unique_id=1273723606]
-visible = false
+[node name="Rungs" parent="wheel" index="1" unique_id=1955941831]
+surface_material_override/0 = SubResource("ShaderMaterial_qlg0r")
 
-[node name="Right Arm" parent="wheel" index="7" unique_id=364203362]
+[node name="Right Axle Mount" parent="wheel" index="2" unique_id=2137826279]
+surface_material_override/0 = SubResource("ShaderMaterial_tuyoq")
+
+[node name="Left Rim" parent="wheel" index="3" unique_id=301334924]
+surface_material_override/0 = SubResource("ShaderMaterial_fjrip")
+
+[node name="Left Axle Mount" parent="wheel" index="4" unique_id=897583943]
+surface_material_override/0 = SubResource("ShaderMaterial_smehm")
+
+[node name="Arm Support" parent="wheel" index="5" unique_id=2013401345]
 visible = false
+surface_material_override/0 = SubResource("ShaderMaterial_ur7pv")
+
+[node name="Left Arm" parent="wheel" index="6" unique_id=792587244]
+visible = false
+surface_material_override/0 = SubResource("ShaderMaterial_y4r1p")
+
+[node name="Right Arm" parent="wheel" index="7" unique_id=916235670]
+visible = false
+surface_material_override/0 = SubResource("ShaderMaterial_d2wvv")
+
+[node name="hamster_v1_0" parent="." unique_id=495291500 instance=ExtResource("4_dqkch")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00076311827, -0.078470215, -0.00579552)
 
 [editable path="wheel"]

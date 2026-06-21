@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://dx3nhy6fwqfmr"]
 
+[ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="1_n6m1a"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_fvywy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4gydr"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h6r57"]
-albedo_color = Color(0.49362105, 0.95354456, 0.6431106, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4gydr"]
+render_priority = 0
+shader = ExtResource("1_n6m1a")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
 
 [node name="StaticBody3D" type="StaticBody3D" unique_id=282728119]
 
@@ -14,4 +19,4 @@ shape = SubResource("BoxShape3D_fvywy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1988521198]
 mesh = SubResource("BoxMesh_4gydr")
-surface_material_override/0 = SubResource("StandardMaterial3D_h6r57")
+surface_material_override/0 = SubResource("ShaderMaterial_4gydr")
