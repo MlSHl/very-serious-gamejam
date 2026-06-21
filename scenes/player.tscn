@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://igmce3ebiefd" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://cc4kg56lpu271" path="res://assets/models/hamster_wheel_v0.3.glb" id="2_g2els"]
 [ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://lld5qjdwya2s" path="res://assets/models/hamster_v1.0.glb" id="4_dqkch"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qhqgy"]
 height = 0.125
@@ -94,5 +95,8 @@ surface_material_override/0 = SubResource("ShaderMaterial_y4r1p")
 [node name="Right Arm" parent="wheel" index="7" unique_id=916235670]
 visible = false
 surface_material_override/0 = SubResource("ShaderMaterial_d2wvv")
+
+[node name="hamster_v1_0" parent="." unique_id=495291500 instance=ExtResource("4_dqkch")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00076311827, -0.078470215, -0.00579552)
 
 [editable path="wheel"]

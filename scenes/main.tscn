@@ -30,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041499138, -2.3841858e-07,
 shape = SubResource("WorldBoundaryShape3D_o5qli")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=504661164]
-transform = Transform3D(0.32077828, -0.88890374, -0.3270346, 0.9051622, 0.18603277, 0.38219532, -0.2788958, -0.41861925, 0.8642773, -17.268442, 35.494774, 42.325867)
+transform = Transform3D(0.32077825, -0.88890374, -0.3270345, 0.9051621, 0.18603282, 0.38219544, -0.27889577, -0.41861925, 0.86427724, -17.268442, 35.494774, 42.325867)
 light_color = Color(1, 1, 0.9372549, 1)
 shadow_enabled = true
 
