@@ -1,9 +1,9 @@
 extends CharacterBody3D
 
 
-const SPEED = 20.0
+const SPEED = 10.0
 const ROTATION_SPEED = 4.0
-const ROLLING_SPEED = 20.0
+const ROLLING_SPEED = 10.0
 const MAX_CAMERA_DELTA_X := 0.1
 const MAX_CAMERA_DELTA_Y := 0.4
 
