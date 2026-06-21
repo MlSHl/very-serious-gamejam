@@ -4,9 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://cc4kg56lpu271" path="res://assets/models/hamster_wheel_v0.3.glb" id="2_g2els"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qhqgy"]
-height = 0.6
+height = 0.1
+radius = 0.1
 
 [node name="player" type="CharacterBody3D" unique_id=1076470779]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392066775]
@@ -14,10 +16,9 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 shape = SubResource("CylinderShape3D_qhqgy")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1736412227]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2.338086, 1.7391558)
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0.51504445, 0.42363656)
 
 [node name="wheel" parent="." unique_id=497356792 instance=ExtResource("2_g2els")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="Arm Support" parent="wheel" index="5" unique_id=1236032062]
 visible = false

@@ -1,14 +1,15 @@
 extends CharacterBody3D
 
 
-const SPEED = 10.0
-const ROTATION_SPEED = 2.5
-const ROLLING_SPEED = 10.0
-const MAX_CAMERA_DELTA_X := 0.2
-const MAX_CAMERA_DELTA_Y := 0.6
+const SPEED = 20.0
+const ROTATION_SPEED = 4.0
+const ROLLING_SPEED = 20.0
+const MAX_CAMERA_DELTA_X := 0.1
+const MAX_CAMERA_DELTA_Y := 0.4
 
 var camera_delta_x := 0.0
 var camera_delta_y := 0.0
+var accumulated_delta := 0.0
 
 @onready var camera: Camera3D = $Camera3D
 @onready var camera_x := camera.position.x
@@ -18,6 +19,7 @@ var camera_delta_y := 0.0
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
+		accumulated_delta += delta
 		velocity += gravity_multiplier * get_gravity() * delta # F/m
 		if camera_delta_y < MAX_CAMERA_DELTA_Y: 
 			camera_delta_y += delta
