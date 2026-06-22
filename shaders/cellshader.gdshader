@@ -10,7 +10,7 @@ void fragment() {
 
 void light() {
 	float dotproduct = max(dot(NORMAL, LIGHT), 0.0); 
-	float band = step(threshold, dotproduct); 
+	float band = smoothstep(threshold, threshold+0.1, dotproduct); 
 	vec3 toon_color = mix(shadow_color, ALBEDO, band); 
 	DIFFUSE_LIGHT += toon_color * LIGHT_COLOR ;
 }
