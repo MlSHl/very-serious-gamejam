@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 const SPEED = 10.0
 const ROTATION_SPEED = 4.0
-const ROLLING_SPEED = 10.0
+const ROLLING_SPEED = 30.0
 const MAX_CAMERA_DELTA_X := 0.1
 const MAX_CAMERA_DELTA_Y := 0.4
 const MAX_HAMSTER_DISPLACEMENT_X := 0.03
@@ -22,10 +22,16 @@ var hamster_len_change_sign := 1
 @onready var hamster_x := hamster.position.x
 @onready var hamster_scale_z := hamster.scale.z
 
-@export var gravity_multiplier := 5.0
+@export var gravity_multiplier := 2.0
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	account_for_gravity(delta);
+	account_for_turning(delta);
+	move_forward(delta);
+
+	move_and_slide()
+
+func account_for_gravity(delta: float):
 	if not is_on_floor():
 		velocity += gravity_multiplier * get_gravity() * delta # F/m
 		if camera_delta_y < MAX_CAMERA_DELTA_Y: 
@@ -37,17 +43,17 @@ func _physics_process(delta: float) -> void:
 			camera.position.y = camera_y + camera_delta_y
 			if abs(camera_delta_y) <= 0.01:
 				camera_delta_y = 0
-		
-	# Turning left/right
+
+func account_for_turning(delta: float):
 	var input_dir := Input.get_axis("left", "right")
 	var hamster_delta = hamster.position.x - hamster_x
 	if input_dir:
 		if abs(hamster_delta) < MAX_HAMSTER_DISPLACEMENT_X:
 			hamster.position.x += delta * DELTA_HAMSTER_DISPLACEMENT_X * input_dir
+		else:
 			if abs(camera_delta_x) < MAX_CAMERA_DELTA_X:
 				camera_delta_x += 	input_dir * delta
 				camera.position.x = camera_x + camera_delta_x 
-		else:
 			rotation.y += -input_dir * ROTATION_SPEED * delta
 	else:
 		if abs(hamster_delta) > MAX_HAMSTER_DISPLACEMENT_X:
@@ -59,8 +65,8 @@ func _physics_process(delta: float) -> void:
 			camera.position.x = camera_x + camera_delta_x
 			if abs(camera_delta_x) <= 0.01:
 				camera_delta_x = 0
-		
-	# Constant foward velocity
+				
+func move_forward(delta: float):
 	var forward := -transform.basis.z
 	forward = forward.normalized()
 	$wheel.rotate_x(-ROLLING_SPEED * delta)
@@ -71,5 +77,3 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x = forward.x * SPEED
 	velocity.z = forward.z * SPEED 
-
-	move_and_slide()
