@@ -1,14 +1,65 @@
-[gd_scene format=3 uid="uid://dx3nhy6fwqfmr"]
+[gd_scene format=4 uid="uid://dx3nhy6fwqfmr"]
 
 [ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="1_n6m1a"]
+[ext_resource type="PackedScene" uid="uid://joq2j3mptkms" path="res://assets/models/purple_cube.glb" id="2_02hfq"]
+[ext_resource type="Texture2D" uid="uid://d30pk3lhcej81" path="res://assets/models/purple_cube_Material Base Color.png" id="3_n6m1a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fvywy"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owjhc"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_4gydr"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_owjhc")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4gydr"]
 render_priority = 0
 shader = ExtResource("1_n6m1a")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rni83"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("3_n6m1a")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e7akc"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAAAEAAEAAwAFAAIABQAAAAIABgAEAAAABQAGAAAABwABAAQABwADAAEABgAHAAQABQADAAcABQAHAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAD///////8AAAAAAAAAAAAA//8AAAAAAAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0uhru"]
+resource_name = "purple_cube_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("/5//f//f/z//3/9//5//P/9f/z//nwAA/5//P/9fAAD/X////5//v/+f////X/+//x//f/9f/z//X/9//x//P/9f/3//n/8//5//f/9f/z//X/+//5//f/+f/7//X/9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_rni83"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////wAA//8AAP///////wAA//8AAP///////////////wAA////vwAA//////+//////////78AAAAA////vwAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTVAAAAAAAA/7///wAA////v///AAAAAP+/AAAAAP///7///wAAAABU1f///////1TV/////wAAVNX//wAA//9U1QAAAAAAAP///////wAA//8AAP//AAD/////AAAAAP///3//v/9//7//f/+//3//v/////////////////////9U1VTVVNVU1VTVVNVU1VTVAAD/fwAA/38AAP9/AAD/f6oqqiqqKqoqqiqqKqoqqir/v/+//7//v/+//7//v/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e7akc")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2vd1w"]
+render_priority = 0
+shader = ExtResource("1_n6m1a")
+shader_parameter/tex = ExtResource("3_n6m1a")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
 
@@ -18,5 +69,15 @@ shader_parameter/threshold = 0.01
 shape = SubResource("BoxShape3D_fvywy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1988521198]
+visible = false
 mesh = SubResource("BoxMesh_4gydr")
 surface_material_override/0 = SubResource("ShaderMaterial_4gydr")
+
+[node name="purple_cube" parent="." unique_id=1349351427 instance=ExtResource("2_02hfq")]
+
+[node name="Cube" parent="purple_cube" index="0" unique_id=74911735]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_0uhru")
+surface_material_override/0 = SubResource("ShaderMaterial_2vd1w")
+
+[editable path="purple_cube"]
