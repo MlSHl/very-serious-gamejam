@@ -6,20 +6,27 @@ const ROTATION_SPEED = 4.0
 const ROLLING_SPEED = 10.0
 const MAX_CAMERA_DELTA_X := 0.1
 const MAX_CAMERA_DELTA_Y := 0.4
+const MAX_HAMSTER_DISPLACEMENT_X := 0.03
+const DELTA_HAMSTER_DISPLACEMENT_X := 0.2
+const MAX_HAMSTER_CHANGE := 0.25
+const HAMSTER_LEN_CHANGE_SPEED := 10
 
 var camera_delta_x := 0.0
 var camera_delta_y := 0.0
-var accumulated_delta := 0.0
+var hamster_len_change_sign := 1
 
 @onready var camera: Camera3D = $Camera3D
 @onready var camera_x := camera.position.x
 @onready var camera_y := camera.position.y
+@onready var hamster: Node3D = $hamster 
+@onready var hamster_x := hamster.position.x
+@onready var hamster_scale_z := hamster.scale.z
+
 @export var gravity_multiplier := 5.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		accumulated_delta += delta
 		velocity += gravity_multiplier * get_gravity() * delta # F/m
 		if camera_delta_y < MAX_CAMERA_DELTA_Y: 
 			camera_delta_y += delta
@@ -33,12 +40,20 @@ func _physics_process(delta: float) -> void:
 		
 	# Turning left/right
 	var input_dir := Input.get_axis("left", "right")
-	rotation.y += -input_dir * ROTATION_SPEED * delta
+	var hamster_delta = hamster.position.x - hamster_x
 	if input_dir:
-		if abs(camera_delta_x) < MAX_CAMERA_DELTA_X:
-			camera_delta_x += 	input_dir * delta
-			camera.position.x = camera_x + camera_delta_x 
+		if abs(hamster_delta) < MAX_HAMSTER_DISPLACEMENT_X:
+			hamster.position.x += delta * DELTA_HAMSTER_DISPLACEMENT_X * input_dir
+			if abs(camera_delta_x) < MAX_CAMERA_DELTA_X:
+				camera_delta_x += 	input_dir * delta
+				camera.position.x = camera_x + camera_delta_x 
+		else:
+			rotation.y += -input_dir * ROTATION_SPEED * delta
 	else:
+		if abs(hamster_delta) > MAX_HAMSTER_DISPLACEMENT_X:
+			hamster.position.x -= delta * sign(hamster_delta) * DELTA_HAMSTER_DISPLACEMENT_X
+		else: 
+			hamster.position.x = hamster_x
 		if abs(camera_delta_x) > 0:
 			camera_delta_x -= sign(camera_delta_x) * delta
 			camera.position.x = camera_x + camera_delta_x
@@ -49,6 +64,10 @@ func _physics_process(delta: float) -> void:
 	var forward := -transform.basis.z
 	forward = forward.normalized()
 	$wheel.rotate_x(-ROLLING_SPEED * delta)
+	var delta_hamster_len :=  hamster.scale.z - hamster_scale_z
+	if abs(delta_hamster_len) >= MAX_HAMSTER_CHANGE:
+		hamster_len_change_sign *= -1
+	hamster.scale.z += 	hamster_len_change_sign * delta * HAMSTER_LEN_CHANGE_SPEED
 	
 	velocity.x = forward.x * SPEED
 	velocity.z = forward.z * SPEED 
