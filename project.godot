@@ -12,7 +12,7 @@ config_version=5
 
 config/name="very-serious-gamejam"
 run/main_scene="uid://cyk2v526u5qxg"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
@@ -22,7 +22,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-neovim/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

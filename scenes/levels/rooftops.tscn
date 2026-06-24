@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dlhntx4xii3l8"]
+
+[ext_resource type="Script" uid="uid://d62w7m3nh7i7" path="res://scripts/prototyping/random_material_color.gd" id="1_8ri7y"]
+[ext_resource type="PackedScene" uid="uid://w1kve54wdliu" path="res://assets/models/hamster_wheel_v1.0.glb" id="1_apwmo"]
+[ext_resource type="PackedScene" uid="uid://b8jyycvo2bfdy" path="res://assets/models/rooftops/rooftop_try.glb" id="3_glvyl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_16ixi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ri7y"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8ri7y"]
+
+[node name="Root" type="Node3D" unique_id=1945949455]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=359945650]
+visible = false
+mesh = SubResource("BoxMesh_16ixi")
+
+[node name="Terrain" type="CSGCombiner3D" parent="." unique_id=1135036386]
+script = ExtResource("1_8ri7y")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Terrain" unique_id=1266407112]
+material = SubResource("StandardMaterial3D_8ri7y")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Terrain" unique_id=710406995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0590123, 0, 0)
+material = SubResource("StandardMaterial3D_8ri7y")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Terrain" unique_id=467420402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1494391, 1.6358178, -7.307206)
+material = SubResource("StandardMaterial3D_8ri7y")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Terrain" unique_id=420982777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2988782, 3.2716355, -14.614412)
+material = SubResource("StandardMaterial3D_8ri7y")
+
+[node name="hamster_wheel_v1_0" parent="." unique_id=1928422 instance=ExtResource("1_apwmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04794717, 0.6325597, -0.9259744)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=434409432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.4134097)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1038753700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.993911, 0, 1.4470036)
+mesh = SubResource("CapsuleMesh_8ri7y")
+
+[node name="rooftop_try" parent="." unique_id=1819457401 instance=ExtResource("3_glvyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.726902, 0, 2.8219967)
+
+[editable path="rooftop_try"]
