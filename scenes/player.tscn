@@ -57,6 +57,12 @@ shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3v2ag"]
+render_priority = 0
+shader = ExtResource("3_qhqgy")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+
 [node name="player" type="CharacterBody3D" unique_id=1076470779]
 script = ExtResource("1_3vyb7")
 
@@ -96,7 +102,26 @@ surface_material_override/0 = SubResource("ShaderMaterial_y4r1p")
 visible = false
 surface_material_override/0 = SubResource("ShaderMaterial_d2wvv")
 
-[node name="hamster_v1_0" parent="." unique_id=495291500 instance=ExtResource("4_dqkch")]
+[node name="hamster" parent="." unique_id=495291500 instance=ExtResource("4_dqkch")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00076311827, -0.078470215, -0.00579552)
 
+[node name="Ears" parent="hamster" index="0" unique_id=1500551575]
+surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
+
+[node name="Tail" parent="hamster" index="1" unique_id=248293125]
+surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
+
+[node name="Eyes" parent="hamster" index="2" unique_id=1466422600]
+surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
+
+[node name="Nose" parent="hamster" index="3" unique_id=79534016]
+surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
+
+[node name="Body" parent="hamster" index="4" unique_id=1693510735]
+surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
+
+[node name="Feet" parent="hamster" index="5" unique_id=129945434]
+surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
+
 [editable path="wheel"]
+[editable path="hamster"]
