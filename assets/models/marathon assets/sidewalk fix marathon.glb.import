@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://lld5qjdwya2s"
-path="res://.godot/imported/hamster_v1.0.glb-28900f5f04ae16b015fca92bd72cee38.scn"
+uid="uid://0884grb36qsr"
+path="res://.godot/imported/sidewalk fix marathon.glb-a57e692ed63434859bd57e0e2578134a.scn"
 
 [deps]
 
-source_file="res://assets/models/hamster_v1.0.glb"
-dest_files=["res://.godot/imported/hamster_v1.0.glb-28900f5f04ae16b015fca92bd72cee38.scn"]
+source_file="res://assets/models/marathon assets/sidewalk fix marathon.glb"
+dest_files=["res://.godot/imported/sidewalk fix marathon.glb-a57e692ed63434859bd57e0e2578134a.scn"]
 
 [params]
 
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1
