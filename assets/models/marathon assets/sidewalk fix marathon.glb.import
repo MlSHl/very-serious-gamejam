@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://joq2j3mptkms"
-path="res://.godot/imported/purple_cube.glb-db001ed533c112271fa332f88abbf1b9.scn"
+uid="uid://0884grb36qsr"
+path="res://.godot/imported/sidewalk fix marathon.glb-a57e692ed63434859bd57e0e2578134a.scn"
 
 [deps]
 
-source_file="res://assets/models/purple_cube.glb"
-dest_files=["res://.godot/imported/purple_cube.glb-db001ed533c112271fa332f88abbf1b9.scn"]
+source_file="res://assets/models/marathon assets/sidewalk fix marathon.glb"
+dest_files=["res://.godot/imported/sidewalk fix marathon.glb-a57e692ed63434859bd57e0e2578134a.scn"]
 
 [params]
 
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1
