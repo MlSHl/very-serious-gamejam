@@ -2,6 +2,6 @@ Player must traverse a tightrope between a busy street.
 
 Player must traverse to the top of a skyscrapher (think gang beasts)
 
-Player goes over a ramp, in the air, and lands on a moving train
+Player goes over a ramp, in the air, and lands on a train
 The train is about to go underground, effectively removing standing space above the train,
 so the player must go fast and go to the end of the train where a jumppad is located to jump off
