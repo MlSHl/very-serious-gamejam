@@ -74,6 +74,13 @@ func move_forward(delta: float):
 	if abs(delta_hamster_len) >= MAX_HAMSTER_CHANGE:
 		hamster_len_change_sign *= -1
 	hamster.scale.z += 	hamster_len_change_sign * delta * HAMSTER_LEN_CHANGE_SPEED
-	
-	velocity.x = forward.x * SPEED
-	velocity.z = forward.z * SPEED 
+	if is_on_floor():
+		var floor_normal := get_floor_normal()
+
+		# Project forward movement onto the ramp/floor surface.
+		var ramp_forward := forward.slide(floor_normal).normalized()
+
+		velocity = ramp_forward * SPEED
+	else:
+		velocity.x = forward.x * SPEED
+		velocity.z = forward.z * SPEED 
