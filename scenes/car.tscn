@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dl6lf5v3rjgke"]
+
+[ext_resource type="Script" uid="uid://ccf8dp7blmk1u" path="res://scripts/car.gd" id="1_50v30"]
+[ext_resource type="PackedScene" uid="uid://6te5bqlxnyhu" path="res://assets/models/city_assets/taxi/car-taxi-v3.glb" id="2_jtldb"]
+[ext_resource type="Material" uid="uid://dqyfax3uvuo7o" path="res://assets/models/city_assets/taxi/new_shader_material.tres" id="3_3mrxu"]
+
+[node name="Car" type="CharacterBody3D" unique_id=153129465]
+script = ExtResource("1_50v30")
+
+[node name="car-taxi-v3" parent="." unique_id=1914791616 instance=ExtResource("2_jtldb")]
+
+[node name="car_chasis" parent="car-taxi-v3" index="0" unique_id=1355655324]
+surface_material_override/0 = ExtResource("3_3mrxu")
+
+[node name="car" parent="car-taxi-v3" index="5" unique_id=109347663]
+visible = false
+
+[editable path="car-taxi-v3"]

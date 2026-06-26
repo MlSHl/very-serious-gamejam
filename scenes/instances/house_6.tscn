@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dve4hpuufv5wn"]
+
+[ext_resource type="PackedScene" uid="uid://bldtcopu8855u" path="res://assets/models/individual_models/house_6/house6.glb" id="1_rcldy"]
+[ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="2_s2a5b"]
+[ext_resource type="Texture2D" uid="uid://bvend7y65sief" path="res://assets/models/individual_models/house_6/house6_house5 Base Color.png" id="3_vl8th"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yn1x5"]
+render_priority = 0
+shader = ExtResource("2_s2a5b")
+shader_parameter/tex = ExtResource("3_vl8th")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1600178528]
+
+[node name="house6" parent="." unique_id=292452035 instance=ExtResource("1_rcldy")]
+transform = Transform3D(0.99965817, -0.026144214, -1.1427999e-09, 0, -4.371139e-08, 1, -0.026144214, -0.99965817, -4.3696446e-08, 0, 0, 0)
+
+[node name="house5 " parent="house6" index="0" unique_id=1605978145]
+surface_material_override/0 = SubResource("ShaderMaterial_yn1x5")
+
+[editable path="house6"]

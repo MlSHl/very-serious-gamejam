@@ -23,7 +23,6 @@ func spawn_car() -> void:
 	
 	var car1 = car_scene.instantiate() as CharacterBody3D
 	
-	
 	get_tree().current_scene.add_child(car1)
 	
 	car1.global_position = position + spawn_vec_1

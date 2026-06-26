@@ -14,54 +14,72 @@ render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qlg0r"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tuyoq"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fjrip"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_smehm"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ur7pv"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y4r1p"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d2wvv"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3v2ag"]
 render_priority = 0
 shader = ExtResource("3_qhqgy")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
 [node name="player" type="CharacterBody3D" unique_id=1076470779]
 floor_max_angle = 1.1868238
@@ -76,52 +94,52 @@ transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0.515
 
 [node name="wheel" parent="." unique_id=497356792 instance=ExtResource("2_g2els")]
 
-[node name="Right Rim" parent="wheel" index="0" unique_id=1240841582]
+[node name="Right Rim" parent="wheel" index="0" unique_id=663720189]
 surface_material_override/0 = SubResource("ShaderMaterial_dqkch")
 
-[node name="Rungs" parent="wheel" index="1" unique_id=528438290]
+[node name="Rungs" parent="wheel" index="1" unique_id=1660277707]
 surface_material_override/0 = SubResource("ShaderMaterial_qlg0r")
 
-[node name="Right Axle Mount" parent="wheel" index="2" unique_id=999816629]
+[node name="Right Axle Mount" parent="wheel" index="2" unique_id=2056729808]
 surface_material_override/0 = SubResource("ShaderMaterial_tuyoq")
 
-[node name="Left Rim" parent="wheel" index="3" unique_id=584185836]
+[node name="Left Rim" parent="wheel" index="3" unique_id=632151640]
 surface_material_override/0 = SubResource("ShaderMaterial_fjrip")
 
-[node name="Left Axle Mount" parent="wheel" index="4" unique_id=281421878]
+[node name="Left Axle Mount" parent="wheel" index="4" unique_id=1728037196]
 surface_material_override/0 = SubResource("ShaderMaterial_smehm")
 
-[node name="Arm Support" parent="wheel" index="5" unique_id=526917924]
+[node name="Arm Support" parent="wheel" index="5" unique_id=1845288136]
 visible = false
 surface_material_override/0 = SubResource("ShaderMaterial_ur7pv")
 
-[node name="Left Arm" parent="wheel" index="6" unique_id=533792808]
+[node name="Left Arm" parent="wheel" index="6" unique_id=1969881295]
 visible = false
 surface_material_override/0 = SubResource("ShaderMaterial_y4r1p")
 
-[node name="Right Arm" parent="wheel" index="7" unique_id=1473570104]
+[node name="Right Arm" parent="wheel" index="7" unique_id=959166877]
 visible = false
 surface_material_override/0 = SubResource("ShaderMaterial_d2wvv")
 
 [node name="hamster" parent="." unique_id=495291500 instance=ExtResource("4_dqkch")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00076311827, -0.078470215, -0.00579552)
 
-[node name="Ears" parent="hamster" index="0" unique_id=1207239576]
+[node name="Ears" parent="hamster" index="0" unique_id=688306703]
 surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
 
-[node name="Tail" parent="hamster" index="1" unique_id=2147117272]
+[node name="Tail" parent="hamster" index="1" unique_id=239113817]
 surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
 
-[node name="Eyes" parent="hamster" index="2" unique_id=742618083]
+[node name="Eyes" parent="hamster" index="2" unique_id=2107019383]
 surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
 
-[node name="Nose" parent="hamster" index="3" unique_id=941786160]
+[node name="Nose" parent="hamster" index="3" unique_id=229297481]
 surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
 
-[node name="Body" parent="hamster" index="4" unique_id=1719970861]
+[node name="Body" parent="hamster" index="4" unique_id=423998890]
 surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
 
-[node name="Feet" parent="hamster" index="5" unique_id=546862910]
+[node name="Feet" parent="hamster" index="5" unique_id=1045985660]
 surface_material_override/0 = SubResource("ShaderMaterial_3v2ag")
 
 [editable path="wheel"]
