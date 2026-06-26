@@ -14,7 +14,7 @@ extends Control
 var R: float = 0.0
 var G: float = 1.0
 var B: float = 0.33
-var stress_level: float = 50
+var stress_level: float = 70
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

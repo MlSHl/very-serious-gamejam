@@ -10,6 +10,7 @@
 [ext_resource type="Material" uid="uid://j1xr36o2ki58" path="res://resources/table.tres" id="7_7b55j"]
 [ext_resource type="Material" uid="uid://cpqps7ovg3533" path="res://resources/wall.tres" id="8_5pajh"]
 [ext_resource type="Material" uid="uid://be7r84hvf20yn" path="res://resources/window.tres" id="9_j7ex8"]
+[ext_resource type="PackedScene" uid="uid://cq6pkvhtja66y" path="res://scenes/main_menu_button.tscn" id="11_lgwnu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_slswj"]
 
@@ -19,49 +20,49 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624, 0)
 script = ExtResource("2_lgwnu")
 
-[node name="Right Rim" parent="hamster_wheel_v1_0" index="0" unique_id=1406762021]
+[node name="Right Rim" parent="hamster_wheel_v1_0" index="0" unique_id=1909196715]
 material_override = ExtResource("2_5dd4i")
 
-[node name="Right Axle Mount" parent="hamster_wheel_v1_0" index="2" unique_id=1829355240]
+[node name="Right Axle Mount" parent="hamster_wheel_v1_0" index="2" unique_id=1416611912]
 material_override = ExtResource("2_5dd4i")
 
-[node name="Left Rim" parent="hamster_wheel_v1_0" index="3" unique_id=136205091]
+[node name="Left Rim" parent="hamster_wheel_v1_0" index="3" unique_id=2047547885]
 material_override = ExtResource("2_5dd4i")
 
-[node name="Left Axle Mount" parent="hamster_wheel_v1_0" index="4" unique_id=2067858915]
+[node name="Left Axle Mount" parent="hamster_wheel_v1_0" index="4" unique_id=1361467236]
 material_override = ExtResource("2_5dd4i")
 
-[node name="Arm Support" parent="hamster_wheel_v1_0" index="5" unique_id=323454347]
+[node name="Arm Support" parent="hamster_wheel_v1_0" index="5" unique_id=126494470]
 visible = false
 material_override = ExtResource("2_5dd4i")
 
-[node name="Left Arm" parent="hamster_wheel_v1_0" index="6" unique_id=1893637648]
+[node name="Left Arm" parent="hamster_wheel_v1_0" index="6" unique_id=2114216001]
 visible = false
 material_override = ExtResource("2_5dd4i")
 
-[node name="Right Arm" parent="hamster_wheel_v1_0" index="7" unique_id=1541822197]
+[node name="Right Arm" parent="hamster_wheel_v1_0" index="7" unique_id=319902010]
 visible = false
 material_override = ExtResource("2_5dd4i")
 
 [node name="hamster_v1_0" parent="." unique_id=539403057 instance=ExtResource("3_lgwnu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.529, 0)
 
-[node name="Ears" parent="hamster_v1_0" index="0" unique_id=142588204]
+[node name="Ears" parent="hamster_v1_0" index="0" unique_id=287027446]
 material_override = ExtResource("4_flqon")
 
-[node name="Tail" parent="hamster_v1_0" index="1" unique_id=503414218]
+[node name="Tail" parent="hamster_v1_0" index="1" unique_id=151789058]
 material_override = ExtResource("4_flqon")
 
-[node name="Eyes" parent="hamster_v1_0" index="2" unique_id=115938294]
+[node name="Eyes" parent="hamster_v1_0" index="2" unique_id=439132950]
 material_override = ExtResource("5_rcqid")
 
-[node name="Nose" parent="hamster_v1_0" index="3" unique_id=1503027570]
+[node name="Nose" parent="hamster_v1_0" index="3" unique_id=1525858163]
 material_override = ExtResource("6_1ajci")
 
-[node name="Body" parent="hamster_v1_0" index="4" unique_id=152936534]
+[node name="Body" parent="hamster_v1_0" index="4" unique_id=2073943237]
 material_override = ExtResource("4_flqon")
 
-[node name="Feet" parent="hamster_v1_0" index="5" unique_id=958456901]
+[node name="Feet" parent="hamster_v1_0" index="5" unique_id=1680939715]
 material_override = ExtResource("5_rcqid")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=995262992]
@@ -117,6 +118,8 @@ mesh = SubResource("BoxMesh_slswj")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=967400006]
 transform = Transform3D(0.24206908, 0.3564265, -0.90242046, -0.092344746, 0.9343234, 0.34425616, 0.9658546, 1.4392355e-08, 0.25908488, -0.36647063, 0.6919978, 0.10965341)
 
+[node name="main menu button" parent="Camera3D" unique_id=160149732 instance=ExtResource("11_lgwnu")]
+
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="." unique_id=1278965743]
 transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, -1.6351287)
 material_override = ExtResource("8_5pajh")
@@ -130,28 +133,28 @@ mesh = SubResource("BoxMesh_slswj")
 [node name="hamster_wheel_v1_1" parent="." unique_id=2004589143 instance=ExtResource("1_jk1qb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624, 0)
 
-[node name="Right Rim" parent="hamster_wheel_v1_1" index="0" unique_id=1406762021]
+[node name="Right Rim" parent="hamster_wheel_v1_1" index="0" unique_id=1909196715]
 visible = false
 
-[node name="Rungs" parent="hamster_wheel_v1_1" index="1" unique_id=2052122208]
+[node name="Rungs" parent="hamster_wheel_v1_1" index="1" unique_id=641422675]
 visible = false
 
-[node name="Right Axle Mount" parent="hamster_wheel_v1_1" index="2" unique_id=1829355240]
+[node name="Right Axle Mount" parent="hamster_wheel_v1_1" index="2" unique_id=1416611912]
 visible = false
 
-[node name="Left Rim" parent="hamster_wheel_v1_1" index="3" unique_id=136205091]
+[node name="Left Rim" parent="hamster_wheel_v1_1" index="3" unique_id=2047547885]
 visible = false
 
-[node name="Left Axle Mount" parent="hamster_wheel_v1_1" index="4" unique_id=2067858915]
+[node name="Left Axle Mount" parent="hamster_wheel_v1_1" index="4" unique_id=1361467236]
 visible = false
 
-[node name="Arm Support" parent="hamster_wheel_v1_1" index="5" unique_id=323454347]
+[node name="Arm Support" parent="hamster_wheel_v1_1" index="5" unique_id=126494470]
 material_override = ExtResource("2_5dd4i")
 
-[node name="Left Arm" parent="hamster_wheel_v1_1" index="6" unique_id=1893637648]
+[node name="Left Arm" parent="hamster_wheel_v1_1" index="6" unique_id=2114216001]
 material_override = ExtResource("2_5dd4i")
 
-[node name="Right Arm" parent="hamster_wheel_v1_1" index="7" unique_id=1541822197]
+[node name="Right Arm" parent="hamster_wheel_v1_1" index="7" unique_id=319902010]
 material_override = ExtResource("2_5dd4i")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2070808758]
