@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qunrt3msjbs7"
+path="res://.godot/imported/moouseclick.mp3-f025e402b0357c193c1aded6ad8f83e4.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds and music/moouseclick.mp3"
+dest_files=["res://.godot/imported/moouseclick.mp3-f025e402b0357c193c1aded6ad8f83e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

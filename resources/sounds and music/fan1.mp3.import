@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bj7aobdx0fx40"
+path="res://.godot/imported/fan1.mp3-5a3e416477e62da750147c3ffc584e30.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds and music/fan1.mp3"
+dest_files=["res://.godot/imported/fan1.mp3-5a3e416477e62da750147c3ffc584e30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

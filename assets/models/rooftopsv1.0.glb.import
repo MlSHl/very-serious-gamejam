@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cyyv3lmsssxv2"
+uid="uid://xnan70k0c8hl"
 path="res://.godot/imported/rooftopsv1.0.glb-eea29a6e9f49313961ab14c9f3bcc670.scn"
 
 [deps]
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=1
+gltf/texture_map_mode=0

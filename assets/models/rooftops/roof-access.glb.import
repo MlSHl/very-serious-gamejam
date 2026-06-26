@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://rrgqgxn4hk34"
+uid="uid://c8slvqtx538iu"
 path="res://.godot/imported/roof-access.glb-7014111a820e9f38422e25a09a590f3e.scn"
 
 [deps]
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=1
+gltf/texture_map_mode=0

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c220hb4nm7ess"
+uid="uid://881bjy2kbud2"
 path="res://.godot/imported/rooftops.blend-7c23317f510b078ed0a4b748b40411ff.scn"
 
 [deps]
@@ -60,4 +60,4 @@ blender/animation/limit_playback=true
 blender/animation/always_sample=true
 blender/animation/group_tracks=true
 gltf/naming_version=2
-gltf/texture_map_mode=1
+gltf/texture_map_mode=0

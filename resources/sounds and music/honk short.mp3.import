@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhjliudicl0bu"
+path="res://.godot/imported/honk short.mp3-d25867d945646f8d84eab74b3ecfe123.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds and music/honk short.mp3"
+dest_files=["res://.godot/imported/honk short.mp3-d25867d945646f8d84eab74b3ecfe123.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

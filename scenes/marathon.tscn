@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bvchecf5a0r15" path="res://scenes/player.tscn" id="1_1bkos"]
 [ext_resource type="Script" uid="uid://cyrsj5jh34riq" path="res://scripts/marathon.gd" id="1_y0gav"]
-[ext_resource type="PackedScene" uid="uid://0884grb36qsr" path="res://assets/models/marathon assets/sidewalk fix marathon.glb" id="3_y0gav"]
+[ext_resource type="PackedScene" uid="uid://dssfnupu367hm" path="res://assets/models/marathon assets/sidewalk fix marathon.glb" id="3_y0gav"]
 
 [node name="Marathon" type="Node3D" unique_id=702202424]
 script = ExtResource("1_y0gav")

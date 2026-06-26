@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dmofbgcbd8q2r"
+uid="uid://cocigwm4d3yqa"
 path="res://.godot/imported/vent5-exhaust.glb-7b3d488e15774450b388c51093bdb853.scn"
 
 [deps]
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=1
+gltf/texture_map_mode=0
