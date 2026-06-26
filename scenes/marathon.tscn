@@ -1,27 +1,22 @@
 [gd_scene format=3 uid="uid://dlhh6qon55p7p"]
 
 [ext_resource type="Script" uid="uid://cyrsj5jh34riq" path="res://scripts/marathon.gd" id="1_y0gav"]
+[ext_resource type="PackedScene" uid="uid://pakmkg5kkdux" path="res://scenes/stressmeter.tscn" id="3_vih64"]
 [ext_resource type="PackedScene" uid="uid://dssfnupu367hm" path="res://assets/models/marathon assets/sidewalk fix marathon.glb" id="3_y0gav"]
 
 [node name="Marathon" type="Node3D" unique_id=702202424]
 script = ExtResource("1_y0gav")
 
+[node name="player" parent="." unique_id=1076470779 instance=ExtResource("1_1bkos")]
+transform = Transform3D(1, 0, 0, 0, 0.92409045, -0.38217384, 0, 0.38217384, 0.92409045, -33.900513, 30.586914, 749.8278)
+
+[node name="stressmeter" parent="player" unique_id=958937246 instance=ExtResource("3_vih64")]
+
 [node name="marathon layout" parent="." unique_id=1880311007 instance=ExtResource("3_y0gav")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.879997, 21.250275, 725.5831)
 
-<<<<<<< Updated upstream
-=======
-[node name="bridge " parent="marathon layout" index="0" unique_id=1454793705]
-surface_material_override/9 = SubResource("ShaderMaterial_wejfl")
-
->>>>>>> Stashed changes
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=432614920]
-transform = Transform3D(-0.7855315, 0.39286572, 0.47811797, -0.41637245, -0.90712583, 0.06129231, 0.4577928, -0.15092812, 0.87615436, 52.7072, 203.97012, 719.84644)
+transform = Transform3D(-0.7855315, 0.39286572, 0.4781179, 0.024557143, -0.7522274, 0.65844584, 0.61833423, 0.5289712, 0.5812506, 52.7072, 203.97012, 719.84644)
 light_color = Color(1, 1, 0.9372549, 1)
 shadow_enabled = true
-<<<<<<< Updated upstream
-=======
-shadow_opacity = 0.3
-
-[editable path="marathon layout"]
->>>>>>> Stashed changes
+shadow_opacity = 0.4
