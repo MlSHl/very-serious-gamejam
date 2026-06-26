@@ -10,16 +10,22 @@ extends Control
 @onready var lvl_3: Sprite2D = $CanvasLayer/spriteholder/stresslevel3/lvl3
 @onready var stresslevel_4: Sprite2D = $CanvasLayer/spriteholder/stresslevel4
 @onready var lvl_4: Sprite2D = $CanvasLayer/spriteholder/stresslevel4/lvl4
+@onready var secondstimer: Timer = $secondstimer
+@onready var timelabel: Label = $timelabel
 
 var R: float = 0.0
 var G: float = 1.0
 var B: float = 0.33
 var stress_level: float = 0
 
+var seconds_passed = 0
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	spriteholder.visible = true
 	print(R," ",G," " ,B," ",stress_level)
+	secondstimer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -43,12 +49,11 @@ func _process(delta: float) -> void:
 	B = 0.33 - stress_level / 0.003
 	
 	spriteholder.modulate = Color(R,G,B,1.0)
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+func _on_timer_timeout() -> void:
+	seconds_passed += 1
+	var minutes = int(seconds_passed/60)
+	var seconds = seconds_passed - minutes * 60
+	timelabel.text = "%02d:%02d" % [minutes, seconds]
