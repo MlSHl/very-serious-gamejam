@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6ekh6uyhgq62"]
+
+[ext_resource type="Script" uid="uid://twan535ejacc" path="res://scripts/car_spawner.gd" id="1_rk3ya"]
+
+[node name="CarSpawner" type="Node3D" unique_id=1976514039]
+script = ExtResource("1_rk3ya")

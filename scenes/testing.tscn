@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cjcq2b6lkb4ap" path="res://scripts/day_night_controller.gd" id="1_ryjsw"]
 [ext_resource type="PackedScene" uid="uid://b8wrlt7t33jbv" path="res://scenes/debugging/debugging_camera.tscn" id="2_pcu7d"]
-[ext_resource type="PackedScene" uid="uid://6te5bqlxnyhu" path="res://assets/models/city_assets/car-taxi-v3.glb" id="3_l6grw"]
+[ext_resource type="PackedScene" uid="uid://6te5bqlxnyhu" path="res://assets/models/city_assets/taxi/car-taxi-v3.glb" id="3_l6grw"]
 
 [node name="Testing" type="Node3D" unique_id=624116047]
 script = ExtResource("1_ryjsw")

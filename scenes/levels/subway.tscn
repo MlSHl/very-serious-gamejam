@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bxoxbwoalteg6"]
+
+[ext_resource type="PackedScene" uid="uid://dqiaaw7b3mffe" path="res://assets/models/subway assets/new_york_subway_level_blockout.blend" id="1_1eclv"]
+
+[node name="Subway" type="Node3D" unique_id=1297958400]
+
+[node name="new_york_subway_level_blockout" parent="." unique_id=405254518 instance=ExtResource("1_1eclv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)

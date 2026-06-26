@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://6te5bqlxnyhu" path="res://assets/models/city_assets/car-taxi-v3.glb" id="1_r3418"]
 [ext_resource type="Script" uid="uid://ccf8dp7blmk1u" path="res://scripts/car.gd" id="1_ywbr6"]
-[ext_resource type="Material" uid="uid://dqyfax3uvuo7o" path="res://assets/models/city_assets/new_shader_material.tres" id="2_yq5ge"]
 [ext_resource type="Texture2D" uid="uid://d3g4bm2h0dkvx" path="res://assets/models/city_assets/car-taxi-v3_car_texture Base Color.png" id="3_r30ch"]
+[ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="4_r30ch"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r30ch"]
 resource_name = "car_texture"
@@ -45,16 +45,25 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6ls4k")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r30ch"]
+render_priority = 0
+shader = ExtResource("4_r30ch")
+shader_parameter/tex = ExtResource("3_r30ch")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
+
 [node name="Car" type="CharacterBody3D" unique_id=153129465]
 script = ExtResource("1_ywbr6")
 
 [node name="car-taxi-v3" parent="." unique_id=1914791616 instance=ExtResource("1_r3418")]
 
-[node name="car_chasis" parent="car-taxi-v3" index="0" unique_id=175589245]
+[node name="car_chasis" parent="car-taxi-v3" index="0" unique_id=471862199]
 mesh = SubResource("ArrayMesh_mrrlx")
-surface_material_override/0 = ExtResource("2_yq5ge")
+surface_material_override/0 = SubResource("ShaderMaterial_r30ch")
 
-[node name="car" parent="car-taxi-v3" index="5" unique_id=122094853]
+[node name="car" parent="car-taxi-v3" index="5" unique_id=1438973336]
 visible = false
 
 [editable path="car-taxi-v3"]
