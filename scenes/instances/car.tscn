@@ -59,11 +59,11 @@ script = ExtResource("1_ywbr6")
 
 [node name="car-taxi-v3" parent="." unique_id=1914791616 instance=ExtResource("1_r3418")]
 
-[node name="car_chasis" parent="car-taxi-v3" index="0" unique_id=471862199]
+[node name="car_chasis" parent="car-taxi-v3" index="0" unique_id=1741003425]
 mesh = SubResource("ArrayMesh_mrrlx")
 surface_material_override/0 = SubResource("ShaderMaterial_r30ch")
 
-[node name="car" parent="car-taxi-v3" index="5" unique_id=1438973336]
+[node name="car" parent="car-taxi-v3" index="5" unique_id=798341686]
 visible = false
 
 [editable path="car-taxi-v3"]
