@@ -1,16 +1,14 @@
 [gd_scene format=3 uid="uid://cuys8nch2rf1u"]
 
+[ext_resource type="Script" uid="uid://twan535ejacc" path="res://scripts/car_spawner.gd" id="1_l6grw"]
 [ext_resource type="PackedScene" uid="uid://b8wrlt7t33jbv" path="res://scenes/debugging/debugging_camera.tscn" id="2_pcu7d"]
-[ext_resource type="PackedScene" uid="uid://pjf24644ukg1" path="res://scenes/instances/humans/woman_01/woman_01.tscn" id="3_3dx25"]
 [ext_resource type="PackedScene" uid="uid://bpihrk78qvkqx" path="res://scenes/instances/humans/man_01/man_01.tscn" id="3_l6grw"]
 
 [node name="Testing" type="Node3D" unique_id=624116047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7596097, 0, 0)
+script = ExtResource("1_l6grw")
+car_scene = ExtResource("3_l6grw")
+spawn_interval = 0.2
 
 [node name="DebuggingCamera" parent="." unique_id=1698815446 instance=ExtResource("2_pcu7d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1805289, 0)
-
-[node name="man_01" parent="." unique_id=1503730446 instance=ExtResource("3_l6grw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72055113, 0, -2.0402858)
-
-[node name="woman_01" parent="." unique_id=1053159651 instance=ExtResource("3_3dx25")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33208227, 0, -3.3291607)
+transform = Transform3D(0.10196335, 0, 0.99478817, 0, 1, 0, -0.99478817, 0, 0.10196335, 4.0903316, 1.1805289, 2.8254583)

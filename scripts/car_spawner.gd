@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var car_scene: PackedScene
+@export var scenes: Array[PackedScene]
 @export var spawn_vec_1: Vector3
 @export var spawn_interval := 2.0
 
@@ -16,19 +16,17 @@ func _process(delta: float) -> void:
 		spawn_car()
 		
 func spawn_car() -> void:
-	print("TRYING TO SPAWN CAR")
-	if car_scene == null:
-		print("FATAL: no car scene chosen for spawner")
+	print("TRYING TO SPAWN NODE")
+	if scenes == null:
+		print("FATAL: no scenes chosen for spawner")
 		return
 	
-	var car1 = car_scene.instantiate() as CharacterBody3D
+	var scene_to_spawn = scenes.pick_random().instantiate() as CharacterBody3D
+
+	get_tree().current_scene.add_child(scene_to_spawn)
 	
-	get_tree().current_scene.add_child(car1)
-	
-	car1.global_position = position + spawn_vec_1
-	car1.global_basis = global_basis
-	
-	
+	scene_to_spawn.global_position = position + spawn_vec_1
+	scene_to_spawn.global_basis = global_basis
 	
 func get_random_color() -> Color:
 	return Color(randf(), randf(), randf())

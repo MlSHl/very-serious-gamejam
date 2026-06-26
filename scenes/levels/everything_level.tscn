@@ -12,7 +12,11 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1764.6655, 44.401566, -
 [node name="Marathon" parent="." unique_id=702202424 instance=ExtResource("2_gncb7")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 515.45825, -28.54216, -235.0088)
 
+[node name="player" parent="Marathon" index="0" unique_id=1076470779]
+transform = Transform3D(1, 0, 0, 0, 0.92409045, -0.38217384, 0, 0.38217384, 0.92409045, -32.886703, 30.586914, 749.8279)
+
 [node name="rooftopsv1_0" parent="." unique_id=306197367 instance=ExtResource("3_gncb7")]
 transform = Transform3D(-1.0000001, 0, 8.7422784e-08, 0, 1, 0, -8.7422784e-08, 0, -1.0000001, 1483.6488, -14.61145, -241.27475)
 
 [editable path="Marathon"]
+[editable path="Marathon/marathon layout"]

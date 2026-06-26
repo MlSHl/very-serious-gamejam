@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bh2u4rajb0cr1"]
+
+[ext_resource type="PackedScene" uid="uid://cb637ntimh22g" path="res://scenes/spawners/car_spawner.tscn" id="1_qws3i"]
+[ext_resource type="PackedScene" uid="uid://bpihrk78qvkqx" path="res://scenes/instances/humans/man_01/man_01.tscn" id="2_5aeq2"]
+[ext_resource type="PackedScene" uid="uid://pjf24644ukg1" path="res://scenes/instances/humans/woman_01/woman_01.tscn" id="3_sfhwf"]
+
+[node name="HumanSpawner" type="Node3D" unique_id=406014846]
+
+[node name="Human Spawner" parent="." unique_id=1976514039 instance=ExtResource("1_qws3i")]
+scenes = Array[PackedScene]([ExtResource("2_5aeq2"), ExtResource("3_sfhwf")])
+spawn_interval = 1.4
+
+[editable path="Human Spawner"]
