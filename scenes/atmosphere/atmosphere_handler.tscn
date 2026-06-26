@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://b3uepolb7op0g"]
+
+[ext_resource type="Script" uid="uid://cjcq2b6lkb4ap" path="res://scripts/day_night_controller.gd" id="1_1u6m6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nhxv8"]
+sky_top_color = Color(0.07422053, 0.09827108, 0.13030556, 1)
+sky_horizon_color = Color(0.016541312, 0, 0.40800813, 1)
+sky_curve = 0.106
+ground_bottom_color = Color(0.07450981, 0.09803922, 0.12941177, 1)
+ground_horizon_color = Color(0.015686275, 0, 0.40784314, 1)
+
+[sub_resource type="Sky" id="Sky_ryjsw"]
+sky_material = SubResource("ProceduralSkyMaterial_nhxv8")
+
+[sub_resource type="Environment" id="Environment_pcu7d"]
+background_mode = 2
+sky = SubResource("Sky_ryjsw")
+glow_enabled = true
+
+[sub_resource type="Animation" id="Animation_l6grw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.8325957, 2.6179938, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_3dx25"]
+resource_name = "day_night"
+length = 24.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 24),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.8325957, 2.6179938, 0), Vector3(-4.4505897, 2.6179938, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sun:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 24),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nuoa6"]
+_data = {
+&"RESET": SubResource("Animation_l6grw"),
+&"day_night": SubResource("Animation_3dx25")
+}
+
+[node name="AtmosphereHandler" type="Node3D" unique_id=624116047]
+script = ExtResource("1_1u6m6")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=393215289]
+transform = Transform3D(-0.8660254, 0.48296297, -0.1294095, 0, -0.25881904, -0.96592563, -0.50000006, -0.83651626, 0.22414382, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1758393625]
+environment = SubResource("Environment_pcu7d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=586723203]
+libraries/ = SubResource("AnimationLibrary_nuoa6")

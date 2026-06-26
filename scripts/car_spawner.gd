@@ -29,3 +29,7 @@ func spawn_car() -> void:
 	car1.global_position = position + spawn_vec_1
 	car1.global_basis = global_basis
 	
+	
+	
+func get_random_color() -> Color:
+	return Color(randf(), randf(), randf())

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d62w7m3nh7i7" path="res://scripts/prototyping/random_material_color.gd" id="1_8ri7y"]
 [ext_resource type="PackedScene" uid="uid://w1kve54wdliu" path="res://assets/models/hamster_wheel_v1.0.glb" id="1_apwmo"]
-[ext_resource type="PackedScene" uid="uid://b8jyycvo2bfdy" path="res://assets/models/rooftops/rooftop_try.glb" id="3_glvyl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_16ixi"]
 
@@ -44,7 +43,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.4134097)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.993911, 0, 1.4470036)
 mesh = SubResource("CapsuleMesh_8ri7y")
 
-[node name="rooftop_try" parent="." unique_id=1819457401 instance=ExtResource("3_glvyl")]
+[node name="rooftop_try" parent="." unique_id=1819457401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.726902, 0, 2.8219967)
 
-[editable path="rooftop_try"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=266122881]
+transform = Transform3D(1, 0, 0, 0, 0.9476708, -0.31924924, 0, 0.31924924, 0.9476708, 0, 1.4518403, 0)
