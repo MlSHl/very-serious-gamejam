@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://dy6km058d6dwj"]
+
+[ext_resource type="PackedScene" uid="uid://w1kve54wdliu" path="res://assets/models/hamster_wheel_v1.0.glb" id="1_jk1qb"]
+[ext_resource type="Material" uid="uid://dxon38vyccjpn" path="res://resources/wheel.tres" id="2_5dd4i"]
+[ext_resource type="Script" uid="uid://cbej51dgq3qtj" path="res://scripts/main_menu_wheel_spinner.gd" id="2_lgwnu"]
+[ext_resource type="PackedScene" uid="uid://lld5qjdwya2s" path="res://assets/models/hamster_v1.0.glb" id="3_lgwnu"]
+[ext_resource type="Material" uid="uid://bbqrgts4pwpou" path="res://resources/hamster.tres" id="4_flqon"]
+[ext_resource type="Material" uid="uid://3g4c0ubte5iu" path="res://resources/black.tres" id="5_rcqid"]
+[ext_resource type="Material" uid="uid://d3a066ga52xgc" path="res://resources/pink.tres" id="6_1ajci"]
+[ext_resource type="Material" uid="uid://j1xr36o2ki58" path="res://resources/table.tres" id="7_7b55j"]
+[ext_resource type="Material" uid="uid://cpqps7ovg3533" path="res://resources/wall.tres" id="8_5pajh"]
+[ext_resource type="Material" uid="uid://be7r84hvf20yn" path="res://resources/window.tres" id="9_j7ex8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_slswj"]
+
+[node name="MainMenu" type="Node3D" unique_id=59756613]
+
+[node name="hamster_wheel_v1_0" parent="." unique_id=1697192638 instance=ExtResource("1_jk1qb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624, 0)
+script = ExtResource("2_lgwnu")
+
+[node name="Right Rim" parent="hamster_wheel_v1_0" index="0" unique_id=1406762021]
+material_override = ExtResource("2_5dd4i")
+
+[node name="Right Axle Mount" parent="hamster_wheel_v1_0" index="2" unique_id=1829355240]
+material_override = ExtResource("2_5dd4i")
+
+[node name="Left Rim" parent="hamster_wheel_v1_0" index="3" unique_id=136205091]
+material_override = ExtResource("2_5dd4i")
+
+[node name="Left Axle Mount" parent="hamster_wheel_v1_0" index="4" unique_id=2067858915]
+material_override = ExtResource("2_5dd4i")
+
+[node name="Arm Support" parent="hamster_wheel_v1_0" index="5" unique_id=323454347]
+visible = false
+material_override = ExtResource("2_5dd4i")
+
+[node name="Left Arm" parent="hamster_wheel_v1_0" index="6" unique_id=1893637648]
+visible = false
+material_override = ExtResource("2_5dd4i")
+
+[node name="Right Arm" parent="hamster_wheel_v1_0" index="7" unique_id=1541822197]
+visible = false
+material_override = ExtResource("2_5dd4i")
+
+[node name="hamster_v1_0" parent="." unique_id=539403057 instance=ExtResource("3_lgwnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.529, 0)
+
+[node name="Ears" parent="hamster_v1_0" index="0" unique_id=142588204]
+material_override = ExtResource("4_flqon")
+
+[node name="Tail" parent="hamster_v1_0" index="1" unique_id=503414218]
+material_override = ExtResource("4_flqon")
+
+[node name="Eyes" parent="hamster_v1_0" index="2" unique_id=115938294]
+material_override = ExtResource("5_rcqid")
+
+[node name="Nose" parent="hamster_v1_0" index="3" unique_id=1503027570]
+material_override = ExtResource("6_1ajci")
+
+[node name="Body" parent="hamster_v1_0" index="4" unique_id=152936534]
+material_override = ExtResource("4_flqon")
+
+[node name="Feet" parent="hamster_v1_0" index="5" unique_id=958456901]
+material_override = ExtResource("5_rcqid")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=995262992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00028955936)
+material_override = ExtResource("7_7b55j")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=354041766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9958316)
+material_override = ExtResource("7_7b55j")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1000913017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+material_override = ExtResource("7_7b55j")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1397627053]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, 1)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=591750459]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, -1)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=15160183]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, 1)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=1061167098]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, -1)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=200025667]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.19934404, 0)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=1455333525]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, 0)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="." unique_id=1169593237]
+transform = Transform3D(0.2, 0, 0, 0, 0.5, 0, 0, 0, 1, 0.689, 0.94934404, 0)
+material_override = ExtResource("9_j7ex8")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=967400006]
+transform = Transform3D(0.24206908, 0.3564265, -0.90242046, -0.092344746, 0.9343234, 0.34425616, 0.9658546, 1.4392355e-08, 0.25908488, -0.36647063, 0.6919978, 0.10965341)
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="." unique_id=1278965743]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, -1.6351287)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="." unique_id=1650837656]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, -1.6351287)
+material_override = ExtResource("8_5pajh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="hamster_wheel_v1_1" parent="." unique_id=2004589143 instance=ExtResource("1_jk1qb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624, 0)
+
+[node name="Right Rim" parent="hamster_wheel_v1_1" index="0" unique_id=1406762021]
+visible = false
+
+[node name="Rungs" parent="hamster_wheel_v1_1" index="1" unique_id=2052122208]
+visible = false
+
+[node name="Right Axle Mount" parent="hamster_wheel_v1_1" index="2" unique_id=1829355240]
+visible = false
+
+[node name="Left Rim" parent="hamster_wheel_v1_1" index="3" unique_id=136205091]
+visible = false
+
+[node name="Left Axle Mount" parent="hamster_wheel_v1_1" index="4" unique_id=2067858915]
+visible = false
+
+[node name="Arm Support" parent="hamster_wheel_v1_1" index="5" unique_id=323454347]
+material_override = ExtResource("2_5dd4i")
+
+[node name="Left Arm" parent="hamster_wheel_v1_1" index="6" unique_id=1893637648]
+material_override = ExtResource("2_5dd4i")
+
+[node name="Right Arm" parent="hamster_wheel_v1_1" index="7" unique_id=1541822197]
+material_override = ExtResource("2_5dd4i")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2070808758]
+transform = Transform3D(0.49078462, 0.47463354, 0.7306528, -0.8434693, 0.04863492, 0.5349711, 0.21837999, -0.8788388, 0.4242081, 0, 1.8553517, -0.039797306)
+
+[editable path="hamster_wheel_v1_0"]
+[editable path="hamster_v1_0"]
+[editable path="hamster_wheel_v1_1"]

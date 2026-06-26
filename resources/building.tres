@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ddxq14vnt5fk7"]
+
+[ext_resource type="Texture2D" uid="uid://rtgev8wy3n0a" path="res://assets/textures/building.png" id="1_gjn47"]
+
+[resource]
+albedo_color = Color(0.53550965, 0.46412593, 0.3643097, 1)
+albedo_texture = ExtResource("1_gjn47")
+uv1_triplanar = true
+texture_filter = 0
