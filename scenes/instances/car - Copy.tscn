@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://c4mvgfm1v25ah"]
 
-[ext_resource type="PackedScene" uid="uid://6te5bqlxnyhu" path="res://assets/models/city_assets/car-taxi-v3.glb" id="1_r3418"]
+[ext_resource type="PackedScene" uid="uid://6te5bqlxnyhu" path="res://assets/models/city_assets/taxi/car-taxi-v3.glb" id="1_r3418"]
 [ext_resource type="Script" uid="uid://ccf8dp7blmk1u" path="res://scripts/car.gd" id="1_ywbr6"]
-[ext_resource type="Material" uid="uid://dqyfax3uvuo7o" path="res://assets/models/city_assets/new_shader_material.tres" id="2_yq5ge"]
+[ext_resource type="Material" uid="uid://dqyfax3uvuo7o" path="res://assets/models/city_assets/taxi/new_shader_material.tres" id="2_yq5ge"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_e6yhv"]
 _surfaces = [{

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://g84kahtcr82b"]
+
+[ext_resource type="PackedScene" uid="uid://b33kjpey71iie" path="res://assets/models/city_assets/straight_road/straight_road_v7.glb" id="1_jxeiy"]
+[ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="2_ogkvk"]
+[ext_resource type="Texture2D" uid="uid://brdyws21t4xbo" path="res://assets/models/city_assets/straight_road/straight_road_v7_Cube.png" id="3_htoqf"]
+[ext_resource type="Texture2D" uid="uid://2m7d62283tin" path="res://assets/models/city_assets/straight_road/straight_road_v7_Cube Base Color.png" id="4_ogkvk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ogkvk"]
+render_priority = 0
+shader = ExtResource("2_ogkvk")
+shader_parameter/tex = ExtResource("3_htoqf")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ofrkc"]
+render_priority = 0
+shader = ExtResource("2_ogkvk")
+shader_parameter/tex = ExtResource("4_ogkvk")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
+
+[node name="straight_road" type="CharacterBody3D" unique_id=685497167]
+
+[node name="straight_road_v7" parent="." unique_id=500246329 instance=ExtResource("1_jxeiy")]
+
+[node name="road" parent="straight_road_v7" index="0" unique_id=663192413]
+surface_material_override/0 = SubResource("ShaderMaterial_ogkvk")
+
+[node name="side" parent="straight_road_v7" index="1" unique_id=918000910]
+surface_material_override/0 = SubResource("ShaderMaterial_ofrkc")
+
+[editable path="straight_road_v7"]
