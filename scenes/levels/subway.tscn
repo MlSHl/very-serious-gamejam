@@ -4,5 +4,8 @@
 
 [node name="Subway" type="Node3D" unique_id=1297958400]
 
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=520670643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 346.51993, 8.502804, 0)
+
 [node name="new_york_subway_level_blockout" parent="." unique_id=405254518 instance=ExtResource("1_1eclv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)

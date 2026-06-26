@@ -3,16 +3,46 @@
 [ext_resource type="PackedScene" uid="uid://bxoxbwoalteg6" path="res://scenes/levels/subway.tscn" id="1_mcyud"]
 [ext_resource type="PackedScene" uid="uid://dlhh6qon55p7p" path="res://scenes/marathon.tscn" id="2_gncb7"]
 [ext_resource type="PackedScene" uid="uid://cyyv3lmsssxv2" path="res://assets/models/levels/rooftops/rooftopsv1.0.glb" id="3_gncb7"]
+[ext_resource type="PackedScene" uid="uid://bvchecf5a0r15" path="res://scenes/player.tscn" id="4_fx1lv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8uknw"]
+size = Vector3(4.1695027, 59.586426, 64.530815)
 
 [node name="everything_level" type="Node3D" unique_id=763309672]
 
 [node name="Subway" parent="." unique_id=1297958400 instance=ExtResource("1_mcyud")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1764.6655, 44.401566, -238.46596)
+transform = Transform3D(-1.3113416e-08, 0, -0.29999998, 0, 0.29999998, 0, 0.29999998, 0, -1.3113416e-08, 6.68454, 50.88356, 79.57599)
+
+[node name="AreaLight3D2" type="AreaLight3D" parent="Subway" unique_id=392348168]
+transform = Transform3D(1, 0, 8.526512e-15, 0, 1, 0, -8.526512e-15, 0, 1, 155.08252, 0, 129.76025)
+light_energy = 5.671
+area_range = 319.999
+area_attenuation = 0.0
 
 [node name="Marathon" parent="." unique_id=702202424 instance=ExtResource("2_gncb7")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 515.45825, -28.54216, -235.0088)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1024.7715, -28.54216, -235.0088)
+
+[node name="marathon layout" parent="Marathon" index="0" unique_id=1880311007]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 213.02716, 29.975456, 991.31836)
 
 [node name="rooftopsv1_0" parent="." unique_id=306197367 instance=ExtResource("3_gncb7")]
-transform = Transform3D(-1.0000001, 0, 8.7422784e-08, 0, 1, 0, -8.7422784e-08, 0, -1.0000001, 1483.6488, -14.61145, -241.27475)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.1247253, -5.8054123, -202.1717)
+
+[node name="player" parent="." unique_id=1076470779 instance=ExtResource("4_fx1lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.567291, 78.00187, -234.7876)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=800918126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.27449, 36.578583, -296.2269)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=795267129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.655235, 22.743233, 21.803955)
+shape = SubResource("BoxShape3D_8uknw")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1091745700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.745152, 24.449707, 25.388092)
+shape = SubResource("BoxShape3D_8uknw")
 
 [editable path="Marathon"]
+[editable path="player"]
+[editable path="player/wheel"]
+[editable path="player/hamster"]
