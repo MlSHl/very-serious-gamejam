@@ -9,7 +9,19 @@ script = ExtResource("1_y0gav")
 [node name="marathon layout" parent="." unique_id=1880311007 instance=ExtResource("3_y0gav")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.879997, 21.250275, 725.5831)
 
+<<<<<<< Updated upstream
+=======
+[node name="bridge " parent="marathon layout" index="0" unique_id=1454793705]
+surface_material_override/9 = SubResource("ShaderMaterial_wejfl")
+
+>>>>>>> Stashed changes
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=432614920]
 transform = Transform3D(-0.7855315, 0.39286572, 0.47811797, -0.41637245, -0.90712583, 0.06129231, 0.4577928, -0.15092812, 0.87615436, 52.7072, 203.97012, 719.84644)
 light_color = Color(1, 1, 0.9372549, 1)
 shadow_enabled = true
+<<<<<<< Updated upstream
+=======
+shadow_opacity = 0.3
+
+[editable path="marathon layout"]
+>>>>>>> Stashed changes

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b11igo5ktw4v3"]
+[gd_scene format=3 uid="uid://cq6pkvhtja66y"]
 
-[ext_resource type="FontFile" uid="uid://dqaubx0ioey37" path="res://assets/fonts/MedodicaRegular.otf" id="1_0v3bg"]
+[ext_resource type="FontFile" uid="uid://dt6a7dmrbvg42" path="res://resources/fonts/MedodicaRegular.otf" id="1_mixf7"]
 [ext_resource type="Texture2D" uid="uid://cgdvegxipdpna" path="res://assets/UI sprites/UI hamster white largepng.png" id="2_0v3bg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_87vd0"]
@@ -36,9 +36,9 @@ offset_right = 505.0
 offset_bottom = 307.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_pressed_color = Color(0, 0.87234735, 0.81728965, 1)
-theme_override_colors/font_hover_color = Color(0.18952331, 0.668184, 0.5249089, 1)
-theme_override_fonts/font = ExtResource("1_0v3bg")
+theme_override_colors/font_pressed_color = Color(0.062051333, 0.2802219, 0.21432084, 1)
+theme_override_colors/font_hover_color = Color(0.13573247, 0.5020529, 0.39318222, 1)
+theme_override_fonts/font = ExtResource("1_mixf7")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_87vd0")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_87vd0")

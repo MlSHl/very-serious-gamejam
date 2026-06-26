@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://j1xr36o2ki58" path="res://resources/table.tres" id="7_7b55j"]
 [ext_resource type="Material" uid="uid://cpqps7ovg3533" path="res://resources/wall.tres" id="8_5pajh"]
 [ext_resource type="Material" uid="uid://be7r84hvf20yn" path="res://resources/window.tres" id="9_j7ex8"]
+[ext_resource type="PackedScene" uid="uid://cq6pkvhtja66y" path="res://scenes/main_menu_button.tscn" id="11_lgwnu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_slswj"]
 
@@ -119,6 +120,8 @@ mesh = SubResource("BoxMesh_slswj")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=967400006]
 transform = Transform3D(0.24206908, 0.3564265, -0.90242046, -0.092344746, 0.9343234, 0.34425616, 0.9658546, 1.4392355e-08, 0.25908488, -0.36647063, 0.6919978, 0.10965341)
+
+[node name="main menu button" parent="Camera3D" unique_id=160149732 instance=ExtResource("11_lgwnu")]
 
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="." unique_id=1278965743]
 transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, -1.6351287)
