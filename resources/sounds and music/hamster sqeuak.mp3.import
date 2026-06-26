@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crbvldu1f03hs"
+path="res://.godot/imported/hamster sqeuak.mp3-d506dbf849ab887ad28dbd6f49df0352.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds and music/hamster sqeuak.mp3"
+dest_files=["res://.godot/imported/hamster sqeuak.mp3-d506dbf849ab887ad28dbd6f49df0352.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

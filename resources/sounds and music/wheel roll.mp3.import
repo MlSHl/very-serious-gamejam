@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpj2e5gvg41ao"
+path="res://.godot/imported/wheel roll.mp3-8dec517712c5cbc1f3110c431cf54716.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds and music/wheel roll.mp3"
+dest_files=["res://.godot/imported/wheel roll.mp3-8dec517712c5cbc1f3110c431cf54716.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

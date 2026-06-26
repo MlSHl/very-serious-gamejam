@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bp5ddofm14vod"]
+
+[ext_resource type="Script" uid="uid://bq23udwsgacpc" path="res://scripts/audio_controller.gd" id="1_41o6r"]
+[ext_resource type="AudioStream" uid="uid://d0wxq5vu1pm7f" path="res://resources/sounds and music/fall.mp3" id="2_3ow5e"]
+[ext_resource type="AudioStream" uid="uid://b8ug22rckvxma" path="res://resources/sounds and music/car crash.mp3" id="2_6fhfa"]
+[ext_resource type="AudioStream" uid="uid://3descectp2ua" path="res://resources/sounds and music/honk long.mp3" id="3_vj1x0"]
+[ext_resource type="AudioStream" uid="uid://dhjliudicl0bu" path="res://resources/sounds and music/honk short.mp3" id="4_12scf"]
+[ext_resource type="AudioStream" uid="uid://bj7aobdx0fx40" path="res://resources/sounds and music/fan1.mp3" id="6_nk1l3"]
+[ext_resource type="AudioStream" uid="uid://d02n6ipgji6i5" path="res://resources/sounds and music/fan2.mp3" id="7_b6vwp"]
+[ext_resource type="AudioStream" uid="uid://beylrqip7cbm4" path="res://resources/sounds and music/fan3.mp3" id="8_nhxt5"]
+[ext_resource type="AudioStream" uid="uid://dgifhtp73n0j4" path="res://resources/sounds and music/fan4.mp3" id="9_ebp8m"]
+[ext_resource type="AudioStream" uid="uid://dn1o1a6ki44ap" path="res://resources/sounds and music/glass shatter.mp3" id="10_yh2ux"]
+[ext_resource type="AudioStream" uid="uid://crbvldu1f03hs" path="res://resources/sounds and music/hamster sqeuak.mp3" id="11_pu1qx"]
+[ext_resource type="AudioStream" uid="uid://dyj10m8ieskq" path="res://resources/sounds and music/metro.mp3" id="12_sguk8"]
+[ext_resource type="AudioStream" uid="uid://qunrt3msjbs7" path="res://resources/sounds and music/moouseclick.mp3" id="13_dxeth"]
+[ext_resource type="AudioStream" uid="uid://bvwyq457iglqo" path="res://resources/sounds and music/people talking.mp3" id="14_cmqw0"]
+[ext_resource type="AudioStream" uid="uid://bpj2e5gvg41ao" path="res://resources/sounds and music/wheel roll.mp3" id="15_52ie4"]
+[ext_resource type="AudioStream" uid="uid://cnd45yh78c2ir" path="res://resources/sounds and music/strees ambiance1.mp3" id="16_i6wmv"]
+[ext_resource type="AudioStream" uid="uid://jeqsduofhug2" path="res://resources/sounds and music/running song1.mp3" id="17_e00o3"]
+[ext_resource type="AudioStream" uid="uid://bce5jfbxj5on4" path="res://resources/sounds and music/running song2.mp3" id="18_jy334"]
+[ext_resource type="AudioStream" uid="uid://dksiqr14fcmbq" path="res://resources/sounds and music/running song3.mp3" id="19_q120g"]
+[ext_resource type="AudioStream" uid="uid://b4xm4roacelty" path="res://resources/sounds and music/running song4with.mp3" id="20_cic6x"]
+[ext_resource type="AudioStream" uid="uid://b8d3tajx7qwbl" path="res://resources/sounds and music/running song4without.mp3" id="21_71s54"]
+
+[node name="AudioController" type="Node3D" unique_id=965142716]
+script = ExtResource("1_41o6r")
+
+[node name="fall" type="AudioStreamPlayer" parent="." unique_id=1625715023]
+stream = ExtResource("2_3ow5e")
+
+[node name="car crash" type="AudioStreamPlayer" parent="." unique_id=475063739]
+stream = ExtResource("2_6fhfa")
+volume_db = -10.0
+
+[node name="honk long" type="AudioStreamPlayer" parent="." unique_id=1215417732]
+stream = ExtResource("3_vj1x0")
+
+[node name="honk short" type="AudioStreamPlayer" parent="." unique_id=1233182056]
+stream = ExtResource("4_12scf")
+
+[node name="fan1" type="AudioStreamPlayer" parent="." unique_id=1013472957]
+stream = ExtResource("6_nk1l3")
+
+[node name="fan2" type="AudioStreamPlayer" parent="." unique_id=371113599]
+stream = ExtResource("7_b6vwp")
+
+[node name="fan3" type="AudioStreamPlayer" parent="." unique_id=409877396]
+stream = ExtResource("8_nhxt5")
+
+[node name="fan4" type="AudioStreamPlayer" parent="." unique_id=1445379833]
+stream = ExtResource("9_ebp8m")
+
+[node name="glass shatter" type="AudioStreamPlayer" parent="." unique_id=1796552704]
+stream = ExtResource("10_yh2ux")
+
+[node name="hamster squeak" type="AudioStreamPlayer" parent="." unique_id=922264351]
+stream = ExtResource("11_pu1qx")
+
+[node name="metro arriving" type="AudioStreamPlayer" parent="." unique_id=212740311]
+stream = ExtResource("12_sguk8")
+
+[node name="mouseclick1" type="AudioStreamPlayer" parent="." unique_id=481183061]
+stream = ExtResource("13_dxeth")
+
+[node name="people talking" type="AudioStreamPlayer" parent="." unique_id=1429379673]
+stream = ExtResource("14_cmqw0")
+
+[node name="wheel roll" type="AudioStreamPlayer" parent="." unique_id=352235816]
+stream = ExtResource("15_52ie4")
+
+[node name="street ambiance" type="AudioStreamPlayer" parent="." unique_id=105640492]
+stream = ExtResource("16_i6wmv")
+
+[node name="running song 1" type="AudioStreamPlayer" parent="." unique_id=646702480]
+stream = ExtResource("17_e00o3")
+
+[node name="running song 2" type="AudioStreamPlayer" parent="." unique_id=2104079397]
+stream = ExtResource("18_jy334")
+
+[node name="running song 3" type="AudioStreamPlayer" parent="." unique_id=1381727116]
+stream = ExtResource("19_q120g")
+
+[node name="running song 4 with" type="AudioStreamPlayer" parent="." unique_id=536635246]
+stream = ExtResource("20_cic6x")
+
+[node name="running song 4 without" type="AudioStreamPlayer" parent="." unique_id=539393123]
+stream = ExtResource("21_71s54")

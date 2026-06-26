@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvwyq457iglqo"
+path="res://.godot/imported/people talking.mp3-9c1a2f71fd03dc5ce1599152921ba34d.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds and music/people talking.mp3"
+dest_files=["res://.godot/imported/people talking.mp3-9c1a2f71fd03dc5ce1599152921ba34d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
