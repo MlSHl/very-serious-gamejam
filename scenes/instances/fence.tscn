@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cj3akyi8jialv"]
+
+[ext_resource type="PackedScene" uid="uid://cbvp4454xocqd" path="res://assets/models/city_assets/fence/fence.glb" id="1_ukmqt"]
+[ext_resource type="Shader" uid="uid://kwhwhvy2mrjf" path="res://shaders/cellshader.gdshader" id="2_0s6l5"]
+[ext_resource type="Texture2D" uid="uid://g80lenumbybk" path="res://assets/models/city_assets/fence/fence_Material Base Color.png" id="3_44cxr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n5wpm"]
+render_priority = 0
+shader = ExtResource("2_0s6l5")
+shader_parameter/tex = ExtResource("3_44cxr")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/threshold = 0.01
+shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
+shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
+
+[node name="Node3D" type="Node3D" unique_id=486451305]
+
+[node name="fence2" parent="." unique_id=477311409 instance=ExtResource("1_ukmqt")]
+
+[node name="fence" parent="fence2" index="0" unique_id=1890736007]
+surface_material_override/0 = SubResource("ShaderMaterial_n5wpm")
+
+[editable path="fence2"]
