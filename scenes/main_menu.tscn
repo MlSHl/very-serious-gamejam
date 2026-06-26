@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dy6km058d6dwj"]
 
 [ext_resource type="PackedScene" uid="uid://w1kve54wdliu" path="res://assets/models/hamster_wheel_v1.0.glb" id="1_jk1qb"]
+[ext_resource type="PackedScene" uid="uid://b11igo5ktw4v3" path="res://scenes/main_menu_button.tscn" id="1_lgwnu"]
 [ext_resource type="Material" uid="uid://dxon38vyccjpn" path="res://resources/wheel.tres" id="2_5dd4i"]
 [ext_resource type="Script" uid="uid://cbej51dgq3qtj" path="res://scripts/main_menu_wheel_spinner.gd" id="2_lgwnu"]
 [ext_resource type="PackedScene" uid="uid://lld5qjdwya2s" path="res://assets/models/hamster_v1.0.glb" id="3_lgwnu"]
@@ -15,6 +16,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_slswj"]
 
 [node name="MainMenu" type="Node3D" unique_id=59756613]
+
+[node name="main menu button" parent="." unique_id=160149732 instance=ExtResource("1_lgwnu")]
 
 [node name="hamster_wheel_v1_0" parent="." unique_id=1697192638 instance=ExtResource("1_jk1qb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624, 0)
