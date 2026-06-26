@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dlhh6qon55p7p"]
 
-[ext_resource type="PackedScene" uid="uid://bvchecf5a0r15" path="res://scenes/player.tscn" id="1_1bkos"]
 [ext_resource type="Script" uid="uid://cyrsj5jh34riq" path="res://scripts/marathon.gd" id="1_y0gav"]
 [ext_resource type="PackedScene" uid="uid://pakmkg5kkdux" path="res://scenes/stressmeter.tscn" id="3_vih64"]
 [ext_resource type="PackedScene" uid="uid://dssfnupu367hm" path="res://assets/models/marathon assets/sidewalk fix marathon.glb" id="3_y0gav"]
