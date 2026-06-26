@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://pakmkg5kkdux"]
+
+[ext_resource type="Script" uid="uid://dgvmvhtkh8cmy" path="res://scripts/stressmeter.gd" id="1_53621"]
+[ext_resource type="Texture2D" uid="uid://d1rpg5oyi8jpy" path="res://assets/UI sprites/UI hamster white.png" id="2_13c60"]
+[ext_resource type="Texture2D" uid="uid://cqtpo2jtdai6o" path="res://assets/UI sprites/UI hamster white spaced.png" id="3_13c60"]
+
+[node name="stressmeter" type="Control" unique_id=958937246]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_53621")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=249897738]
+
+[node name="spriteholder" type="NinePatchRect" parent="CanvasLayer" unique_id=1970005883]
+modulate = Color(0, 1, 0.33333334, 1)
+texture_filter = 1
+offset_left = 32.999985
+offset_top = 45.000023
+offset_right = 98.59998
+offset_bottom = 132.6
+scale = Vector2(5, 5)
+texture = ExtResource("2_13c60")
+draw_center = false
+region_rect = Rect2(6, 87, 13, 13)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="stresslevel0" type="Sprite2D" parent="CanvasLayer/spriteholder" unique_id=661457166]
+visible = false
+position = Vector2(33.2, 26.199997)
+scale = Vector2(1.9999996, 1.9999996)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(27, 13, 27, 21)
+
+[node name="lvl0" type="Sprite2D" parent="CanvasLayer/spriteholder/stresslevel0" unique_id=1137758113]
+position = Vector2(0.4999981, 22.000002)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(1, 31, 19, 8)
+
+[node name="stresslevel1" type="Sprite2D" parent="CanvasLayer/spriteholder" unique_id=1672769614]
+visible = false
+position = Vector2(33.2, 26.199991)
+scale = Vector2(1.9999996, 1.9999996)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(27, 38, 27, 21)
+
+[node name="lvl1" type="Sprite2D" parent="CanvasLayer/spriteholder/stresslevel1" unique_id=2022055566]
+position = Vector2(0.5, 22.000002)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(1, 40, 19, 8)
+
+[node name="stresslevel2" type="Sprite2D" parent="CanvasLayer/spriteholder" unique_id=216947191]
+visible = false
+position = Vector2(33.2, 26.199991)
+scale = Vector2(1.9999996, 1.9999996)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(27, 65, 27, 21)
+
+[node name="lvl2" type="Sprite2D" parent="CanvasLayer/spriteholder/stresslevel2" unique_id=1263710882]
+position = Vector2(0.5, 22.000002)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(1, 49, 19, 8)
+
+[node name="stresslevel3" type="Sprite2D" parent="CanvasLayer/spriteholder" unique_id=821678544]
+visible = false
+position = Vector2(33.2, 26.199991)
+scale = Vector2(1.9999996, 1.9999996)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(59, 13, 27, 21)
+
+[node name="lvl3" type="Sprite2D" parent="CanvasLayer/spriteholder/stresslevel3" unique_id=785347847]
+position = Vector2(0.5, 21.999998)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(1, 58, 19, 8)
+
+[node name="stresslevel4" type="Sprite2D" parent="CanvasLayer/spriteholder" unique_id=618524167]
+visible = false
+position = Vector2(33.199997, 26.199991)
+scale = Vector2(1.9999996, 1.9999996)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(59, 45, 27, 21)
+
+[node name="lvl4" type="Sprite2D" parent="CanvasLayer/spriteholder/stresslevel4" unique_id=211750765]
+position = Vector2(0.5000019, 22.000002)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("3_13c60")
+region_enabled = true
+region_rect = Rect2(1, 67, 19, 8)
