@@ -75,12 +75,15 @@ stream = ExtResource("16_i6wmv")
 
 [node name="running song 1" type="AudioStreamPlayer" parent="." unique_id=646702480]
 stream = ExtResource("17_e00o3")
+volume_db = -10.0
 
 [node name="running song 2" type="AudioStreamPlayer" parent="." unique_id=2104079397]
 stream = ExtResource("18_jy334")
+volume_db = -10.0
 
 [node name="running song 3" type="AudioStreamPlayer" parent="." unique_id=1381727116]
 stream = ExtResource("19_q120g")
+volume_db = -10.0
 
 [node name="running song 4 with" type="AudioStreamPlayer" parent="." unique_id=536635246]
 stream = ExtResource("20_cic6x")
