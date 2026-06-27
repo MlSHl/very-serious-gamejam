@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 10.0
+const SPEED = 20.0
 const ROTATION_SPEED = 4.0
 const ROLLING_SPEED = 30.0
 const MAX_CAMERA_DELTA_X := 0.1
@@ -10,6 +10,7 @@ const MAX_HAMSTER_DISPLACEMENT_X := 0.03
 const DELTA_HAMSTER_DISPLACEMENT_X := 0.2
 const MAX_HAMSTER_CHANGE := 0.25
 const HAMSTER_LEN_CHANGE_SPEED := 10
+const STRESS_DELTA := 10
 
 var camera_delta_x := 0.0
 var camera_delta_y := 0.0
@@ -50,6 +51,7 @@ func account_for_turning(delta: float):
 	var input_dir := Input.get_axis("left", "right")
 	var hamster_delta = hamster.position.x - hamster_x
 	if input_dir:
+		stressmeter.stress_level+=delta * STRESS_DELTA
 		if abs(hamster_delta) < MAX_HAMSTER_DISPLACEMENT_X:
 			hamster.position.x += delta * DELTA_HAMSTER_DISPLACEMENT_X * input_dir
 		else:
