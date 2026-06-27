@@ -21,6 +21,8 @@
 [ext_resource type="AudioStream" uid="uid://dksiqr14fcmbq" path="res://resources/sounds and music/running song3.mp3" id="19_q120g"]
 [ext_resource type="AudioStream" uid="uid://b4xm4roacelty" path="res://resources/sounds and music/running song4with.mp3" id="20_cic6x"]
 [ext_resource type="AudioStream" uid="uid://b8d3tajx7qwbl" path="res://resources/sounds and music/running song4without.mp3" id="21_71s54"]
+[ext_resource type="AudioStream" uid="uid://bfw6j2n0ytccw" path="res://resources/sounds and music/stressincrease.mp3" id="22_b6vwp"]
+[ext_resource type="AudioStream" uid="uid://x322bbxly1he" path="res://resources/sounds and music/stressdecrease.mp3" id="23_nhxt5"]
 
 [node name="AudioController" type="Node3D" unique_id=965142716]
 script = ExtResource("1_41o6r")
@@ -85,3 +87,9 @@ stream = ExtResource("20_cic6x")
 
 [node name="running song 4 without" type="AudioStreamPlayer" parent="." unique_id=539393123]
 stream = ExtResource("21_71s54")
+
+[node name="stessincrease" type="AudioStreamPlayer" parent="." unique_id=602936941]
+stream = ExtResource("22_b6vwp")
+
+[node name="stessdecrease" type="AudioStreamPlayer" parent="." unique_id=246108767]
+stream = ExtResource("23_nhxt5")
