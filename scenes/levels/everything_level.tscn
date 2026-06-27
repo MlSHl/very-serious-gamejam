@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bpvmyvfpw7y5o"]
 
 [ext_resource type="PackedScene" uid="uid://bxoxbwoalteg6" path="res://scenes/levels/subway.tscn" id="1_mcyud"]
-[ext_resource type="PackedScene" uid="uid://60x12pskfon8" path="res://scenes/old_player.tscn" id="1_mijse"]
 [ext_resource type="Script" uid="uid://cyrsj5jh34riq" path="res://scripts/marathon.gd" id="2_4lle5"]
 [ext_resource type="PackedScene" uid="uid://dssfnupu367hm" path="res://assets/models/marathon assets/sidewalk fix marathon.glb" id="3_7crs1"]
 [ext_resource type="PackedScene" uid="uid://cyyv3lmsssxv2" path="res://assets/models/levels/rooftops/rooftopsv1.0.glb" id="3_gncb7"]
@@ -12,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c78ibs20affqd" path="res://assets/models/marathon assets/sidewalk fix marathon_Cube.png" id="5_snhyk"]
 [ext_resource type="PackedScene" uid="uid://5338k7ic8fya" path="res://scenes/instances/house_7.tscn" id="6_p4kjp"]
 [ext_resource type="PackedScene" uid="uid://c3tc7woxstq8i" path="res://assets/models/city_assets/subway_entrance.tscn" id="7_7crs1"]
+[ext_resource type="PackedScene" uid="uid://bvchecf5a0r15" path="res://scenes/player.tscn" id="7_e82x5"]
 [ext_resource type="PackedScene" uid="uid://dx3nhy6fwqfmr" path="res://scenes/cuberd.tscn" id="7_p0hhd"]
 [ext_resource type="PackedScene" uid="uid://pakmkg5kkdux" path="res://scenes/stressmeter.tscn" id="8_888mj"]
 [ext_resource type="PackedScene" uid="uid://bupbdjmfae8ya" path="res://scenes/instances/house_1.tscn" id="8_drmhh"]
@@ -21,6 +21,16 @@
 [ext_resource type="PackedScene" uid="uid://dve4hpuufv5wn" path="res://scenes/instances/house_6.tscn" id="12_dnb30"]
 [ext_resource type="PackedScene" uid="uid://cj3akyi8jialv" path="res://scenes/instances/fence.tscn" id="13_j6jcv"]
 [ext_resource type="Texture2D" uid="uid://b66kehk3wed1g" path="res://assets/models/textures/road-v5.png" id="14_3o3fh"]
+[ext_resource type="PackedScene" uid="uid://w1kve54wdliu" path="res://assets/models/hamster_wheel_v1.0.glb" id="23_3o3fh"]
+[ext_resource type="Script" uid="uid://cbej51dgq3qtj" path="res://scripts/main_menu_wheel_spinner.gd" id="24_kb2hi"]
+[ext_resource type="Material" uid="uid://dxon38vyccjpn" path="res://resources/wheel.tres" id="25_hjx28"]
+[ext_resource type="PackedScene" uid="uid://lld5qjdwya2s" path="res://assets/models/hamster_v1.0.glb" id="26_yiwdn"]
+[ext_resource type="Material" uid="uid://bbqrgts4pwpou" path="res://resources/hamster.tres" id="27_puhux"]
+[ext_resource type="Material" uid="uid://3g4c0ubte5iu" path="res://resources/black.tres" id="28_vpr0c"]
+[ext_resource type="Material" uid="uid://d3a066ga52xgc" path="res://resources/pink.tres" id="29_ms1sb"]
+[ext_resource type="Material" uid="uid://j1xr36o2ki58" path="res://resources/table.tres" id="30_7m2eh"]
+[ext_resource type="Material" uid="uid://cpqps7ovg3533" path="res://resources/wall.tres" id="31_0os54"]
+[ext_resource type="Material" uid="uid://be7r84hvf20yn" path="res://resources/window.tres" id="32_6svi0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0wfyh"]
 
@@ -71,11 +81,12 @@ shader_parameter/threshold = 0.01
 shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
 shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_slswj"]
+
 [node name="everything_level" type="Node3D" unique_id=763309672]
 
-[node name="player" parent="." unique_id=1076470779 instance=ExtResource("1_mijse")]
+[node name="player" parent="." unique_id=1076470779 instance=ExtResource("7_e82x5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7271347, 8.164906, 182.15764)
-floor_max_angle = 0.87266463
 
 [node name="stressmeter" parent="player" unique_id=958937246 instance=ExtResource("8_888mj")]
 
@@ -86,7 +97,12 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 48.5
 scenes = Array[PackedScene]([ExtResource("4_mijse")])
 spawn_interval = 1.4
 
-[node name="CarSpawner3" parent="main" unique_id=1976514039 instance=ExtResource("3_xk0j3")]
+[node name="CarSpawner4" parent="main" unique_id=1976514039 instance=ExtResource("3_xk0j3")]
+transform = Transform3D(0.54973096, 0, 0.83534175, 0, 1, 0, -0.83534175, 0, 0.54973096, -66.014786, 1.9, -91.534485)
+scenes = Array[PackedScene]([ExtResource("4_mijse")])
+spawn_interval = 12.0
+
+[node name="CarSpawner3" parent="main" unique_id=1927339303 instance=ExtResource("3_xk0j3")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -26.143364, 1.9, 103.72892)
 scenes = Array[PackedScene]([ExtResource("4_mijse")])
 spawn_interval = 1.4
@@ -157,6 +173,12 @@ transform = Transform3D(0.8986025, 0, 1.201047, 0, 1.5, 0, -1.201047, 0, 0.89860
 
 [node name="Node3D10" parent="main" unique_id=1499764429 instance=ExtResource("13_j6jcv")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.5487285, 2.5191393, 47.407764)
+
+[node name="Node3D46" parent="main" unique_id=44886143 instance=ExtResource("13_j6jcv")]
+transform = Transform3D(0.031073786, 0, 1.4996781, 0, 1.5, 0, -1.4996781, 0, 0.031073786, -22.483543, 2.5191393, 47.407764)
+
+[node name="Node3D47" parent="main" unique_id=1212217001 instance=ExtResource("13_j6jcv")]
+transform = Transform3D(0.031073786, 0, 1.4996781, 0, 1.5, 0, -1.4996781, 0, 0.031073786, -22.483543, 2.5191393, 33.5772)
 
 [node name="Node3D16" parent="main" unique_id=1655249176 instance=ExtResource("9_ta04v")]
 transform = Transform3D(-1.3113416e-07, -3, -1.3113416e-07, 0, -1.3113416e-07, 3, -3, 1.3113416e-07, 5.7320566e-15, -19.086979, -0.24999714, 61.958015)
@@ -313,6 +335,151 @@ transform = Transform3D(0.13134396, 0, 0.991337, 0, 1, 0, -0.991337, 0, 0.131343
 [node name="Node3D" parent="rooftopsv1_0" unique_id=1686089732 instance=ExtResource("7_7crs1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -533.6095, 53.821396, -10.56229)
 
+[node name="MainMenu" type="Node3D" parent="." unique_id=59756613]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.48019743, 5.690562, 183.4839)
+
+[node name="hamster_wheel_v1_0" parent="MainMenu" unique_id=1697192638 instance=ExtResource("23_3o3fh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624, 0)
+script = ExtResource("24_kb2hi")
+
+[node name="Right Rim" parent="MainMenu/hamster_wheel_v1_0" index="0" unique_id=78183250]
+material_override = ExtResource("25_hjx28")
+
+[node name="Right Axle Mount" parent="MainMenu/hamster_wheel_v1_0" index="2" unique_id=704028373]
+material_override = ExtResource("25_hjx28")
+
+[node name="Left Rim" parent="MainMenu/hamster_wheel_v1_0" index="3" unique_id=1133930270]
+material_override = ExtResource("25_hjx28")
+
+[node name="Left Axle Mount" parent="MainMenu/hamster_wheel_v1_0" index="4" unique_id=32631782]
+material_override = ExtResource("25_hjx28")
+
+[node name="Arm Support" parent="MainMenu/hamster_wheel_v1_0" index="5" unique_id=1938441206]
+visible = false
+material_override = ExtResource("25_hjx28")
+
+[node name="Left Arm" parent="MainMenu/hamster_wheel_v1_0" index="6" unique_id=427847115]
+visible = false
+material_override = ExtResource("25_hjx28")
+
+[node name="Right Arm" parent="MainMenu/hamster_wheel_v1_0" index="7" unique_id=936878010]
+visible = false
+material_override = ExtResource("25_hjx28")
+
+[node name="hamster_v1_0" parent="MainMenu" unique_id=539403057 instance=ExtResource("26_yiwdn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.529, 0)
+
+[node name="Ears" parent="MainMenu/hamster_v1_0" index="0" unique_id=688306703]
+material_override = ExtResource("27_puhux")
+
+[node name="Tail" parent="MainMenu/hamster_v1_0" index="1" unique_id=239113817]
+material_override = ExtResource("27_puhux")
+
+[node name="Eyes" parent="MainMenu/hamster_v1_0" index="2" unique_id=2107019383]
+material_override = ExtResource("28_vpr0c")
+
+[node name="Nose" parent="MainMenu/hamster_v1_0" index="3" unique_id=229297481]
+material_override = ExtResource("29_ms1sb")
+
+[node name="Body" parent="MainMenu/hamster_v1_0" index="4" unique_id=423998890]
+material_override = ExtResource("27_puhux")
+
+[node name="Feet" parent="MainMenu/hamster_v1_0" index="5" unique_id=1045985660]
+material_override = ExtResource("28_vpr0c")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MainMenu" unique_id=995262992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00028955936)
+material_override = ExtResource("30_7m2eh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MainMenu" unique_id=354041766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9958316)
+material_override = ExtResource("30_7m2eh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="MainMenu" unique_id=1000913017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+material_override = ExtResource("30_7m2eh")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="MainMenu" unique_id=1397627053]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, 1)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="MainMenu" unique_id=591750459]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, -1)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="MainMenu" unique_id=15160183]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, 1)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="MainMenu" unique_id=1061167098]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, -1)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="MainMenu" unique_id=200025667]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.19934404, 0)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="MainMenu" unique_id=1455333525]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, 0)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="MainMenu" unique_id=1169593237]
+transform = Transform3D(0.2, 0, 0, 0, 0.5, 0, 0, 0, 1, 0.689, 0.94934404, 0)
+material_override = ExtResource("32_6svi0")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="MainMenu" unique_id=1278965743]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 0.69934404, -1.6351287)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="MainMenu" unique_id=1650837656]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0.68930745, 1.699344, -1.6351287)
+material_override = ExtResource("31_0os54")
+mesh = SubResource("BoxMesh_slswj")
+
+[node name="hamster_wheel_v1_1" parent="MainMenu" unique_id=2004589143 instance=ExtResource("23_3o3fh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624, 0)
+
+[node name="Right Rim" parent="MainMenu/hamster_wheel_v1_1" index="0" unique_id=78183250]
+visible = false
+
+[node name="Rungs" parent="MainMenu/hamster_wheel_v1_1" index="1" unique_id=1305587168]
+visible = false
+
+[node name="Right Axle Mount" parent="MainMenu/hamster_wheel_v1_1" index="2" unique_id=704028373]
+visible = false
+
+[node name="Left Rim" parent="MainMenu/hamster_wheel_v1_1" index="3" unique_id=1133930270]
+visible = false
+
+[node name="Left Axle Mount" parent="MainMenu/hamster_wheel_v1_1" index="4" unique_id=32631782]
+visible = false
+
+[node name="Arm Support" parent="MainMenu/hamster_wheel_v1_1" index="5" unique_id=1938441206]
+material_override = ExtResource("25_hjx28")
+
+[node name="Left Arm" parent="MainMenu/hamster_wheel_v1_1" index="6" unique_id=427847115]
+material_override = ExtResource("25_hjx28")
+
+[node name="Right Arm" parent="MainMenu/hamster_wheel_v1_1" index="7" unique_id=936878010]
+material_override = ExtResource("25_hjx28")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MainMenu" unique_id=332699666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6575303, 2.749557, 0)
+
 [editable path="Subway"]
 [editable path="Subway/new_york_subway_level_blockout"]
 [editable path="Marathon/marathon layout"]
+[editable path="MainMenu/hamster_wheel_v1_0"]
+[editable path="MainMenu/hamster_v1_0"]
+[editable path="MainMenu/hamster_wheel_v1_1"]
