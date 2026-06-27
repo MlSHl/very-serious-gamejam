@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://x33eqk2ae71q"]
+
+[ext_resource type="Script" uid="uid://b7cfsg7uuaueh" path="res://scripts/deathscreen.gd" id="1_ylnw1"]
+[ext_resource type="FontFile" uid="uid://dqaubx0ioey37" path="res://assets/fonts/MedodicaRegular.otf" id="2_uurjc"]
+
+[node name="deathscreen" type="ColorRect" unique_id=473290920]
+offset_left = -290.0
+offset_top = -187.0
+offset_right = 2253.0
+offset_bottom = 1187.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_ylnw1")
+
+[node name="Label2" type="Label" parent="." unique_id=848936667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -438.0
+offset_top = -65.5
+offset_right = 438.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uurjc")
+theme_override_font_sizes/font_size = 64
+text = "Unfortunately, Harry could not complete the race
+due to stress.
+what did you do?
+press escape to go back"
+horizontal_alignment = 1

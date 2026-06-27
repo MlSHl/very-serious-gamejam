@@ -49,6 +49,9 @@ func _process(delta: float) -> void:
 	B = 0.33 - stress_level / 0.003
 	
 	spriteholder.modulate = Color(R,G,B,1.0)
+	
+	if stress_level > 100:
+		get_tree().change_scene_to_file("res://scenes/deathscreen.tscn")
 
 
 
