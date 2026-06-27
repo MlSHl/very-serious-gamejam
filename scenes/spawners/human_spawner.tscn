@@ -8,6 +8,5 @@
 
 [node name="Human Spawner" parent="." unique_id=1976514039 instance=ExtResource("1_qws3i")]
 scenes = Array[PackedScene]([ExtResource("2_5aeq2"), ExtResource("3_sfhwf")])
-spawn_interval = 1.4
 
 [editable path="Human Spawner"]

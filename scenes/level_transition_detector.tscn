@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://mhffc28du8sn"]
+
+[ext_resource type="Script" uid="uid://fin41mt21ct7" path="res://scripts/transition_detector/detector.gd" id="1_ilho8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qa34l"]
+
+[node name="LevelTransitionDetector" type="Node3D" unique_id=833375400]
+script = ExtResource("1_ilho8")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1696624445]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=875601720]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("BoxShape3D_qa34l")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

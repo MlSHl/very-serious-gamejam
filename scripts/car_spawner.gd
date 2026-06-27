@@ -2,18 +2,23 @@ extends Node3D
 
 @export var scenes: Array[PackedScene]
 @export var spawn_vec_1: Vector3
-@export var spawn_interval := 2.0
+@export var min_spawn_interval := 1.0
+@export var max_spawn_interval := 3.0
+
+var current_spawn_interval
 
 var spawn_timer := 0.0
 
 func _ready() -> void:
 	spawn_car()
+	assign_random_interval()
 
 func _process(delta: float) -> void:
 	spawn_timer+=delta
-	if spawn_timer >= spawn_interval:
+	if spawn_timer >= current_spawn_interval:
 		spawn_timer = 0
 		spawn_car()
+		assign_random_interval()
 		
 func spawn_car() -> void:
 	print("TRYING TO SPAWN NODE")
@@ -27,6 +32,9 @@ func spawn_car() -> void:
 	
 	scene_to_spawn.global_position = position + spawn_vec_1
 	scene_to_spawn.global_basis = global_basis
-	
+
+func assign_random_interval():
+	current_spawn_interval = randf_range(min_spawn_interval, max_spawn_interval)
+
 func get_random_color() -> Color:
 	return Color(randf(), randf(), randf())
