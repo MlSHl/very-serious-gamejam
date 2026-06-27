@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c3tc7woxstq8i"]
+
+[ext_resource type="PackedScene" uid="uid://bcdvg787l1cwc" path="res://assets/models/city_assets/subway_entrance/subway_entrance.glb" id="1_gmuh0"]
+
+[node name="subway_entrance" type="Node3D" unique_id=1686089732]
+
+[node name="subway_entrance" parent="." unique_id=968208245 instance=ExtResource("1_gmuh0")]
+
+[editable path="subway_entrance"]

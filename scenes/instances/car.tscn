@@ -54,8 +54,8 @@ shader_parameter/threshold = 0.01
 shader_parameter/car_color = Color(1, 0.929, 0.384, 1)
 shader_parameter/car_color_dark = Color(0.871, 0.737, 0.373, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6ls4k"]
-size = Vector3(2.505, 2, 7.432)
+[sub_resource type="BoxShape3D" id="BoxShape3D_r30ch"]
+size = Vector3(2.5, 2, 7.4)
 
 [node name="Car" type="CharacterBody3D" unique_id=153129465]
 script = ExtResource("1_ywbr6")
@@ -67,11 +67,8 @@ transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0.071474746, -0.4
 mesh = SubResource("ArrayMesh_mrrlx")
 surface_material_override/0 = SubResource("ShaderMaterial_r30ch")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="car-taxi-v3" unique_id=682517362]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -0.00033196807, 0.08407658, -0.07261187)
-shape = SubResource("BoxShape3D_6ls4k")
-
-[node name="car" parent="car-taxi-v3" index="6" unique_id=798341686]
-visible = false
+[node name="CollisionShape3D" parent="car-taxi-v3/car" parent_id_path=PackedInt32Array(1914791616, 798341686) index="0" unique_id=2114086578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48130637)
+shape = SubResource("BoxShape3D_r30ch")
 
 [editable path="car-taxi-v3"]

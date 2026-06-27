@@ -13,6 +13,7 @@ script = ExtResource("1_50v30")
 [node name="car-taxi-v3" parent="." unique_id=1914791616 instance=ExtResource("2_jtldb")]
 
 [node name="car_chasis" parent="car-taxi-v3" index="0" unique_id=1741003425]
+visible = false
 surface_material_override/0 = ExtResource("3_3mrxu")
 
 [node name="CollisionShape3D" parent="car-taxi-v3/car" parent_id_path=PackedInt32Array(1914791616, 798341686) index="0" unique_id=2114086578]

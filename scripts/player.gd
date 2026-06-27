@@ -24,6 +24,8 @@ var hamster_len_change_sign := 1
 
 @export var gravity_multiplier := 2.0
 
+@onready var stressmeter = $stressmeter
+
 func _physics_process(delta: float) -> void:
 	account_for_gravity(delta);
 	account_for_turning(delta);
