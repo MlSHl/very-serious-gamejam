@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 20.0
+const SPEED = 15.0
 const ROTATION_SPEED = 4.0
 const ROLLING_SPEED = 30.0
 const MAX_CAMERA_DELTA_X := 0.1
@@ -10,7 +10,7 @@ const MAX_HAMSTER_DISPLACEMENT_X := 0.03
 const DELTA_HAMSTER_DISPLACEMENT_X := 0.2
 const MAX_HAMSTER_CHANGE := 0.25
 const HAMSTER_LEN_CHANGE_SPEED := 10
-const STRESS_DELTA := 10
+const STRESS_DELTA := 5
 
 var camera_delta_x := 0.0
 var camera_delta_y := 0.0
