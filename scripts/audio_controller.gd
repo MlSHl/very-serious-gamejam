@@ -19,3 +19,10 @@ extends Node3D
 @onready var running_song_3: AudioStreamPlayer = $"running song 3"
 @onready var running_song_4_with: AudioStreamPlayer = $"running song 4 with"
 @onready var running_song_4_without: AudioStreamPlayer = $"running song 4 without"
+
+func _stop_playing_music():
+	running_song_1.stop()
+	running_song_2.stop()
+	running_song_3.stop()
+	running_song_4_with.stop()
+	running_song_4_without.stop()

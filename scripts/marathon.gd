@@ -6,7 +6,7 @@ func _ready() -> void:
 	AudioController.running_song_1.play()
 	AudioController.running_song_1.stop()
 	
-	AudioController.glass_shatter.play()
+	#AudioController.glass_shatter.play()
 	
 
 

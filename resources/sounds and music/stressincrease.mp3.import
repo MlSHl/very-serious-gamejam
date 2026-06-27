@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfw6j2n0ytccw"
+path="res://.godot/imported/stressincrease.mp3-42e9b3fccc35e304743663ee05501ebd.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds and music/stressincrease.mp3"
+dest_files=["res://.godot/imported/stressincrease.mp3-42e9b3fccc35e304743663ee05501ebd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

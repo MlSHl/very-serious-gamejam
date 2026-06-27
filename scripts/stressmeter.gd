@@ -52,6 +52,7 @@ func _process(delta: float) -> void:
 	
 	if stress_level > 100:
 		get_tree().change_scene_to_file("res://scenes/deathscreen.tscn")
+		AudioController._stop_playing_music()
 
 
 
